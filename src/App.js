@@ -45,14 +45,15 @@ function App() {
 
 const G ={
  GridContainer:styled.div`
- width:100vw;
+ width:100%;
  height:100vh;
- margin: 40px;
+  margin:0 auto;
+  overflow:auto;
 
   display:grid;
   grid-gap: 2em;
   grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr 1fr 1fr;
 
   grid-template-areas:
    "header header header"
