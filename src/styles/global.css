@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box; /* Android = 2.3, iOS = 4 */
+  -moz-box-sizing: border-box; /* Firefox 1+ */
+  box-sizing: border-box; /* Chrome, IE 8+, Opera, Safari 5.1 */
+  -ms-overflow-style: none; /* 인터넷 익스플로러 */
+  scrollbar-width: none; /* 파이어폭스 */
+  text-decoration-line: none;
+  /* touch-action: pan-y; */
+}
+
+* ::-webkit-scrollbar {
+  display: none; /* 크롬, 사파리, 오페라, 엣지 */
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  line-height: 1;
+}
+
+html {
+  font-size: 62.5%; /* 10px */
+}
+
+/* Tablet */
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 45.5%;
+    touch-action: pan-y;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 62.5%; /* 10px */
+    touch-action: pan-y;
+  }
+}
+
+/* Fonts */
+@font-face {
+  font-family: PretendardBold;
+  src: url("../assets/fonts/Pretendard-Bold.otf");
+}
+
+@font-face {
+  font-family: PretendardSemiBold;
+  src: url("../assets/fonts/Pretendard-SemiBold.otf");
+}
+
+@font-face {
+  font-family: PretendardMedium;
+  src: url("../assets/fonts/Pretendard-Medium.otf");
+}
+
+@font-face {
+  font-family: PretendardRegular;
+  src: url("../assets/fonts/Pretendard-Regular.otf");
+}
