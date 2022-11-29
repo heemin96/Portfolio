@@ -13,6 +13,10 @@ import NodeIcon from "./assets/icons/Node_ic.png";
 import MysqlIcon from "./assets/icons/Mysql_ic.png";
 import OrangeRightArrow from "./assets/icons/OrangeRightArrow.png";
 import StraightLine from "./assets/icons/StraightLine.png";
+import IdeaImage from "./assets/icons/IdeaImage.png";
+import TwitterIcon from "./assets/icons/Twitter_ic.png";
+import InIcon from "./assets/icons/In_ic.png";
+import RafoIcon from "./assets/icons/Rafo_ic.png";
 
 function App() {
   return (
@@ -78,10 +82,9 @@ function App() {
               <div style={{ display: "flex" }}>
                 <div
                   style={{
-                    height: "120px",
+                    height: "116px",
                     width: "1px",
                     marginRight: "15px",
-                    marginTop: "3px",
                     borderRight: "1px solid black",
                     borderRadius: "999px",
                     background: "#111827",
@@ -124,9 +127,20 @@ function App() {
                 iuntos!
               </G.IdeaSubLeadingTitles>
 
-              <G.IdeaEmail>IdeaEmaila</G.IdeaEmail>
+              <G.IdeaEmail>khk8300@naver.com</G.IdeaEmail>
+              <G.IdeaIcon>
+                <img src={TwitterIcon} />
+                <img src={InIcon} />
+              </G.IdeaIcon>
             </G.FlexColumnContainer>
+            <G.IdeaImage>
+              <img src={IdeaImage} />
+            </G.IdeaImage>
           </G.IdeaFlexContainer>
+          <G.IdeaFooter>
+            Developed by Alessandro Achtenberg | Design by{" "}
+            <img src={RafoIcon} />
+          </G.IdeaFooter>
         </G.GridItemIdea>
       </G.GridContainer>
     </G.PageContainer>
@@ -137,13 +151,10 @@ const G = {
   PageContainer: styled.div`
     margin: 0 90px;
 
-
     @media (max-width: 768px) {
       margin 0 30px;
       touch-action: pan-y;
     }
-
-
 
   `,
 
@@ -407,14 +418,14 @@ const G = {
     grid-area: aboutMeMemoji;
     justify-self: end;
 
-    @media (max-width: 1224) {
+    @media (max-width: 1224px) {
       justify-self: start;
     }
 
-    @media (max-width: 768) {
-      width: 100px;
-      height: 100px;
-      justify-self: start;
+    @media (max-width: 768px) {
+      // width: 100px;
+      // height: 100px;
+      // justify-self: start;
     }
   `,
 
@@ -437,13 +448,13 @@ const G = {
     gap: 25px;
     margin-top: 35px;
     object-fit: cover;
+    justify-content: center;
   `,
 
   /////////////////////////////////////////
   GridItemIdea: styled.div`
     grid-area: idea;
     width: 100%;
-    height: 100%;
     background: #111827;
     box-shadow: 0px 20px 25px -5px rgba(0, 0, 0, 0.1),
       0px 10px 10px -5px rgba(0, 0, 0, 0.04);
@@ -463,6 +474,7 @@ const G = {
     display: flex;
     flex-direction: column;
     padding: 0px 74px 0px 64px;
+    margin-top: 30px;
   `,
 
   IdeaLeadingTitles: styled.div`
@@ -484,7 +496,51 @@ const G = {
     font-weight: 400;
     font-size: 28px;
     line-height: 28px;
+    margin-top: 30px;
+    text-decoration: underline;
+    text-underline-position: under;
   `,
+
+  IdeaIcon: styled.div`
+    display: flex;
+    margin-top: 30px;
+    gap: 15px;
+  `,
+
+  IdeaImage: styled.div`
+    padding: 0 80px 0 0;
+    // background: linear-gradient(
+    //     180deg,
+    //     rgba(255, 255, 255, 0.2) 38.52%,
+    //     rgba(0, 0, 0, 0.2) 100%
+    //   ),
+    //   url(image.png);
+    // background-blend-mode: overlay, normal;
+    // border-radius: 2000000px;
+
+    @media (max-width: 1224px) {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  `,
+
+  IdeaFooter: styled.div`
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: center;
+    color: #ffffff;
+    padding-top: 150px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  `,
+
+  IdeaPointText: styled.div``,
 };
 
 export default App;
