@@ -31,25 +31,27 @@ function IdeaPage() {
         </G.FlexColumnContainer>
 
         <G.IdeaImage>
-          <img src={IdeaImage} />
+          <img src={IdeaImage} style={{ borderRadius: "20px" }} />
         </G.IdeaImage>
       </G.IdeaFlexContainer>
-      <G.GoUpButton onClick={() => window.scrollTo(0, 0)}>
-        <BsFillArrowUpCircleFill />
-      </G.GoUpButton>
-      <G.IdeaFooter>
-        Developed by Alessandro Achtenberg | Design by
-        <RafoLogo name="rafo" />
-      </G.IdeaFooter>
 
-      <G.IdeaFooterMobile>
-        Developed by Alessandro Achtenberg
-        <br />
-        Design by
-        <br />
-        <br />
-        <RafoLogo name="rafo" />
-      </G.IdeaFooterMobile>
+      <div style={{ display: "flex", flexDirection: "column" }}>
+        <G.GoUpButton onClick={() => window.scrollTo(0, 0)}>
+          <BsFillArrowUpCircleFill />
+        </G.GoUpButton>
+        <G.IdeaFooter>
+          Developed by Alessandro Achtenberg | Design by
+          <br></br>
+          <RafoLogo name="rafo" />
+        </G.IdeaFooter>
+
+        <G.IdeaFooterMobile>
+          Developed by Alessandro Achtenberg
+          <br />
+          Design by
+          <RafoLogo name="rafo" />
+        </G.IdeaFooterMobile>
+      </div>
     </>
   );
 }
@@ -60,17 +62,27 @@ const G = {
     flex-direction: row;
     color: #ffffff;
     gap 64px;
+    justify-content:space-between;
 
-    @media (min-width: 1024px){
+    @media (max-width: 1024px){
       margin-bottom:10px;
+      text-align-last: center;
+        justify-content: center;
+        
+        
+      
     }
   `,
 
   FlexColumnContainer: styled.div`
     display: flex;
     flex-direction: column;
-    padding: 0px 74px 0px 64px;
+    padding: 0px 0px 0px 64px;
     margin-top: 30px;
+
+    @media (max-width: 1024px) {
+      padding: 0;
+    }
   `,
 
   IdeaLeadingTitles: styled.div`
@@ -109,19 +121,14 @@ const G = {
     display: flex;
     margin-top: 30px;
     gap: 15px;
+
+    @media (max-width: 1024px) {
+      justify-content: center;
+    }
   `,
 
   IdeaImage: styled.div`
-    padding: 0 80px 0 0;
-    // background: linear-gradient(
-    //     180deg,
-    //     rgba(255, 255, 255, 0.2) 38.52%,
-    //     rgba(0, 0, 0, 0.2) 100%
-    //   ),
-    //   url(image.png);
-    // background-blend-mode: overlay, normal;
-    // border-radius: 2000000px;
-
+    padding: 0 60px 0 0;
     @media (max-width: 1024px) {
       display: none;
     }
@@ -139,7 +146,7 @@ const G = {
     line-height: 100%;
     text-align: center;
     color: #ffffff;
-    padding-top: 150px;
+    // padding-top: 150px;
     padding-bottom: 0;
     margin-bottom: 0;
 
@@ -159,11 +166,11 @@ const G = {
       line-height: 30px;
       text-align: center;
       color: #ffffff;
-      padding-top: 130px;
-      margin-
+      // padding-top: 130px;
       padding-bottom: 0;
       margin-bottom: 0;
       justify-content: center;
+      flex-direction: column;
     }
   `,
 
@@ -171,34 +178,24 @@ const G = {
 
   GoUpButton: styled.button`
     cursor: pointer;
-    position: absolute;
-    left: 45%;
-    font-size: 100px;
+    font-size: 80px;
     background-color: transparent;
     border: none;
     color: white;
+    margin-bottom: 20px;
 
     @media (max-width: 1024px) {
-      left: 50;
-      margin-top: 50px;
       font-size: 70px;
+      margin-top: 50px;
     }
     @media (max-width: 768px) {
-      left: 50;
-      margin-top: 50px;
       font-size: 50px;
     }
   `,
 };
 
 const RafoLogo = styled(IconComponent)`
-  position: absolute;
-  margin-left: 10px;
-  margin-top: -10px;
-
-  @media (max-width: 1024px) {
-margin-top:55px;
-margin-Left:3px;
+  align-self: center;
 `;
 
 export default IdeaPage;

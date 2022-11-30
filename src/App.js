@@ -1,6 +1,7 @@
 // import logo from "./logo.svg";
 import styled from "styled-components";
 import React from "react";
+
 //Page Import
 import Navbar from "./pages/Navbar";
 import IntroducePage from "./pages/IntroducePage";
@@ -45,8 +46,11 @@ const G = {
   
 
   margin:0 90px;
-    }
+    
 
+
+ 
+    }
     @media (max-width: 768px) {
       margin 0 30px;
       touch-action: pan-y;
@@ -57,21 +61,20 @@ const G = {
   GridContainer: styled.div`
     width: 100%;
     height: 100vh;
-
     justify-content: center;
     display: grid;
     grid-gap: 2.5em;
     grid-template-rows: auto;
-    gird-template-columns: auto;
+    // grid-template-columns: 1fr;
 
     grid-template-areas:
-      "header"
-      "introduce"
-      "project"
-      "aboutMe"
-      "idea";
+      " header "
+      " introduce "
+      " project "
+      " aboutMe "
+      " idea ";
 
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
     }
   `,
 
@@ -81,16 +84,18 @@ const G = {
     grid-area: header;
     border-radius: 5px;
     padding: 30px 0 0 0px;
-
     display: grid;
     background-color: white;
+    @media (max-width: 1024px) {
+      width: 90vw;
+    }
   `,
 
   ///////Introduce Section/////////
 
   GridItemIntroduce: styled.div`
     grid-area: introduce;
-    background: linear-gradient(99.03deg, #fbed96 -1%, #abecd6 92.31%);
+    background: linear-gradient(99.03deg, #fbed96 -1%, #abe 92.31%);
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1),
       0px 23px 30px rgba(171, 236, 214, 0.2);
     border-radius: 44px;
@@ -117,16 +122,16 @@ const G = {
       padding: 60px 0px 28px 0px;
   `,
 
-  GoUpButton: styled.button`
-    position: fixed;
-    bottom: 400px;
-    left: 5px;
-    width: 70px;
-    height: 70px;
-    background: transparent;
-    cursor: pointer;
-    border-radius: 100%;
-  `,
+  // GoUpButton: styled.button`
+  //   position: fixed;
+  //   bottom: 400px;
+  //   left: 5px;
+  //   width: 70px;
+  //   height: 70px;
+  //   background: transparent;
+  //   cursor: pointer;
+  //   border-radius: 100%;
+  // `,
 };
 
 export default App;

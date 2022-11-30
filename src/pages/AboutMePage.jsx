@@ -20,13 +20,14 @@ function AboutMePage() {
         </G.AboutMeLeadingTitle>
         <G.AboutMeLeading>
           <div style={{ display: "flex" }}>
-            <G.AboutMeLine />
-            Tenho 20 anos, estou em transição de carreira,
-            <br /> vindo da área administrativa onde desenvolvi
-            <br /> experiência com gestão de <br />
-            pessoas, gestão de empresas
-            <br /> e negociação com cliente.
-            <br /> Hoje construo aplicações fullstack!
+            <G.AboutMeLine>
+              Tenho 20 anos, estou em transição de carreira,
+              <br /> vindo da área administrativa onde desenvolvi
+              <br /> experiência com gestão de <br />
+              pessoas, gestão de empresas
+              <br /> e negociação com cliente.
+              <br /> Hoje construo aplicações fullstack!
+            </G.AboutMeLine>
           </div>
         </G.AboutMeLeading>
         <G.AboutMeMemoji>
@@ -44,6 +45,12 @@ function AboutMePage() {
             <img src={NodeIcon} />
             <img src={MysqlIcon} />
           </G.AboutMeSkillsIconContainer>
+
+          <G.MAboutMeSkillsIconContainer>
+            <M_ReactIcon name="m_react" />
+            <M_NodeIcon name="m_node" />
+            <M_MysqlIcon name="m_mysql" />
+          </G.MAboutMeSkillsIconContainer>
         </G.AboutMeSkills>
       </G.AboutMeGridContainer>
     </G.GridItemAboutMe>
@@ -119,17 +126,13 @@ const G = {
     font-weight: 500;
     font-size:24px
     line-height:32.74px;
+    
   `,
 
-  AboutMeLine: styled.div`
-    height: 120px;
-    width: 1px;
-    margin-top: 5px;
-    margin-right: 15px;
-    border-right: 1px solid black;
-    border-radius: 999px;
-    background: #111827;
-    padding-left: 3px;
+  AboutMeLine: styled.span`
+    border-left: 4px solid black;
+    padding-left: 5px;
+    border-radius: 4px;
   `,
 
   AboutMeMemoji: styled.div`
@@ -170,10 +173,25 @@ const G = {
     gap: 25px;
     margin-top: 35px;
     object-fit: cover;
-    justify-content: center;
+    // justify-content: center;
 
     @media (max-width: 768px) {
       display: none;
+    }
+  `,
+
+  MAboutMeSkillsIconContainer: styled.div`
+    display: none;
+    gap: 25px;
+    margin-top: 35px;
+    justify-content: center;
+
+    @media (max-width: 1024px) {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      display: flex;
     }
   `,
 };
@@ -182,6 +200,42 @@ const MAboutMeMemojiIcon = styled(IconComponentPng)`
   display: none;
 
   @media (amx-width: 768px) {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+  }
+`;
+
+const M_ReactIcon = styled(IconComponentPng)`
+  display: none;
+
+  @media (amx-width: 1024px) {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+  }
+`;
+
+const M_NodeIcon = styled(IconComponentPng)`
+  display: none;
+
+  @media (amx-width: 1024px) {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+  }
+`;
+
+const M_MysqlIcon = styled(IconComponentPng)`
+  display: none;
+
+  @media (amx-width: 1024px) {
     display: none;
   }
 
