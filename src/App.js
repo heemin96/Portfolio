@@ -1,6 +1,7 @@
 // import logo from "./logo.svg";
 import styled from "styled-components";
 import React from "react";
+// import "./styles/global.css";
 
 //Page Import
 import Navbar from "./pages/Navbar";
@@ -44,18 +45,12 @@ function App() {
 const G = {
   PageContainer: styled.div`
   
-
   margin:0 90px;
-    
-
-
- 
     }
     @media (max-width: 768px) {
-      margin 0 30px;
+      margin: 0 30px;
       touch-action: pan-y;
     }
-
   `,
 
   GridContainer: styled.div`
@@ -90,8 +85,6 @@ const G = {
       // width: 90vw;
     }
   `,
-
-  ///////Introduce Section/////////
 
   GridItemIntroduce: styled.div`
     grid-area: introduce;

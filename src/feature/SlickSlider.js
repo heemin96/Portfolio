@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+// import "../styles/global.css";
 
 //Slick
 import Slider from "react-slick";
@@ -11,6 +12,7 @@ import IconComponentPng from "../utils/pngIcon.js";
 import IconComponent from "../utils/icon.js";
 import { BsFillArrowLeftCircleFill } from "react-icons/bs";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
+import { MdAccessibilityNew } from "react-icons/md";
 
 const SlickSlider = (props) => {
   const settings = {
@@ -39,6 +41,15 @@ const SlickSlider = (props) => {
 
     responsive: [
       // 반응형 웹 구현 옵션
+
+      {
+        breakpoint: 1224,
+        settings: {
+          slidesToShow: 1,
+          rows: 1,
+          slidesPerRow: 2,
+        },
+      },
       {
         breakpoint: 1024,
         settings: {
@@ -62,8 +73,9 @@ const SlickSlider = (props) => {
         <S.SliderContatiner>
           <S.SliderLeadingTitle>E-commerce</S.SliderLeadingTitle>
           <S.SliderSkillStack>ddd</S.SliderSkillStack>
-          <S.SliderImage>
-            <Ecommerce name="ecommerce" />
+          <S.SliderImage style={{ backgroundColor: "blue" }}>
+            <MdAccessibilityNew style={{ fontSize: "100px" }} />
+            {/* <Ecommerce name="ecommerce" /> */}
           </S.SliderImage>
           <S.SliderHub>
             <Github name="github" />
@@ -76,7 +88,7 @@ const SlickSlider = (props) => {
           <S.SliderLeadingTitle>Trybe Course</S.SliderLeadingTitle>
           <S.SliderSkillStack>ddd</S.SliderSkillStack>
           <S.SliderImage>
-            <TrybeCourse name="trybecourse" />
+            {/* <TrybeCourse name="trybecourse" /> */}
           </S.SliderImage>
           <S.SliderHub>
             <Github name="github" />
@@ -89,7 +101,7 @@ const SlickSlider = (props) => {
           <S.SliderLeadingTitle>Trybetunes</S.SliderLeadingTitle>
           <S.SliderSkillStack>ddd</S.SliderSkillStack>
           <S.SliderImage>
-            <TrybeTunes name="trybetunes" />
+            {/* <TrybeTunes name="trybetunes" /> */}
           </S.SliderImage>
           <S.SliderHub>
             <Github name="github" />
@@ -102,7 +114,7 @@ const SlickSlider = (props) => {
           <S.SliderLeadingTitle>Ourtube</S.SliderLeadingTitle>
           <S.SliderSkillStack>ddd</S.SliderSkillStack>
           <S.SliderImage>
-            <TrybeCourse name="trybecourse" />
+            {/* <TrybeCourse name="trybecourse" /> */}
           </S.SliderImage>
           <S.SliderHub></S.SliderHub>
           <S.SliderBlock>-</S.SliderBlock>
@@ -112,7 +124,7 @@ const SlickSlider = (props) => {
           <S.SliderLeadingTitle>TripUs</S.SliderLeadingTitle>
           <S.SliderSkillStack>ddd</S.SliderSkillStack>
           <S.SliderImage>
-            <TrybeCourse name="trybecourse" />
+            {/* <TrybeCourse name="trybecourse" /> */}
           </S.SliderImage>
           <S.SliderHub></S.SliderHub>
           <S.SliderBlock>-</S.SliderBlock>
@@ -122,7 +134,7 @@ const SlickSlider = (props) => {
           <S.SliderLeadingTitle>YoutubeClone</S.SliderLeadingTitle>
           <S.SliderSkillStack>ddd</S.SliderSkillStack>
           <S.SliderImage>
-            <TrybeCourse name="trybecourse" />
+            {/* <TrybeCourse name="trybecourse" /> */}
           </S.SliderImage>
           <S.SliderHub></S.SliderHub>
           <S.SliderBlock>-</S.SliderBlock>
@@ -134,15 +146,9 @@ const SlickSlider = (props) => {
 
 const StyledSlider = styled(Slider)`
   height: 100%;
-  width: 95vw;
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  transition-delay: 10ms;
-  // margin: 5%;
+  width: 90vw;
 
+  // margin: 5%;
   .slick-prev::before,
   .slick-next::before {
     opacity: 0;
@@ -173,10 +179,10 @@ const NextTo = styled.div`
 `;
 const S = {
   SliderContatiner: styled.div`
-    width: 100%;
+    width: 90%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    margin-top: 5rem;
   `,
 
   SliderLeadingTitle: styled.div`
@@ -215,15 +221,3 @@ const Github = styled(IconComponentPng)``;
 const Global = styled(IconComponentPng)``;
 
 export default SlickSlider;
-
-// dots: true,     // 슬라이드 밑에 점 보이게
-// infinite: true, // 무한으로 반복
-// speed: 500,     // 넘기는 속도
-// autoplay: false, // 자동으로 넘김
-// autoplaySpeed: 2000, //자동으로 넘어가는 속도
-// slidesToShow: 1,    // 스크린에 보여지는 슬라이드 개수
-// slidesToScroll: 1,  // n장씩 뒤로 넘어가게 함
-// centerMode: true,   // 중앙정렬
-// centerPadding: "0px", // 0px 하면 슬라이드 끝쪽 이미지가 안잘림
-// nextArrow: <>  // 슬라이드 좌우 넘기기 커스텀 버튼
-// prevArrow: <>  //슬라이드 좌우 넘기기 커스텀 버튼

@@ -53,7 +53,6 @@ const Menu = styled.div`
     0px 10px 10px -5px rgba(0, 0, 0, 0.04);
   border-radius: 18px;
   position: relative;
-
   right: 0;
   width: 150px;
   text-align: center;

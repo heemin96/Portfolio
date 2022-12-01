@@ -32,6 +32,7 @@ const G = {
     line-height: 82px;
     font-weight: 700;
     font-family: Poppins;
+    margin-bottom: 50px;
 
     @media (max-width: 1024px) {
       font-size: 66px;
