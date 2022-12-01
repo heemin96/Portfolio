@@ -20,13 +20,13 @@ const SlickSlider = (props) => {
     vertical: false,
     dots: false,
     infinite: true,
-    slidesToShow: 1,
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     speed: 700,
     autoplaySpeed: 1500,
     rows: 1,
-    slidesPerRow: 3,
+    // slidesPerRow: 3,
 
     nextArrow: (
       <NextTo>
@@ -43,14 +43,6 @@ const SlickSlider = (props) => {
       // 반응형 웹 구현 옵션
 
       {
-        breakpoint: 1224,
-        settings: {
-          slidesToShow: 1,
-          rows: 1,
-          slidesPerRow: 2,
-        },
-      },
-      {
         breakpoint: 1024,
         settings: {
           slidesToShow: 1,
@@ -63,10 +55,12 @@ const SlickSlider = (props) => {
         settings: {
           rows: 2,
           slidesPerRow: 1,
+          slidesToShow: 1,
         },
       },
     ],
   };
+
   return (
     <StyledSlider>
       <Slider {...settings}>
@@ -78,7 +72,10 @@ const SlickSlider = (props) => {
             {/* <Ecommerce name="ecommerce" /> */}
           </S.SliderImage>
           <S.SliderHub>
+            <span>Github</span>
             <Github name="github" />
+
+            <span>Global</span>
             <Global name="global" />
           </S.SliderHub>
           <S.SliderBlock>-</S.SliderBlock>
@@ -87,11 +84,15 @@ const SlickSlider = (props) => {
         <S.SliderContatiner>
           <S.SliderLeadingTitle>Trybe Course</S.SliderLeadingTitle>
           <S.SliderSkillStack>ddd</S.SliderSkillStack>
-          <S.SliderImage>
+          <S.SliderImage style={{ backgroundColor: "red" }}>
+            <MdAccessibilityNew style={{ fontSize: "100px" }} />
             {/* <TrybeCourse name="trybecourse" /> */}
           </S.SliderImage>
           <S.SliderHub>
+            <span>Github</span>
             <Github name="github" />
+
+            <span>Global</span>
             <Global name="global" />
           </S.SliderHub>
           <S.SliderBlock>-</S.SliderBlock>
@@ -100,43 +101,67 @@ const SlickSlider = (props) => {
         <S.SliderContatiner>
           <S.SliderLeadingTitle>Trybetunes</S.SliderLeadingTitle>
           <S.SliderSkillStack>ddd</S.SliderSkillStack>
-          <S.SliderImage>
+          <S.SliderImage style={{ backgroundColor: "yellow" }}>
+            <MdAccessibilityNew style={{ fontSize: "100px" }} />
             {/* <TrybeTunes name="trybetunes" /> */}
           </S.SliderImage>
           <S.SliderHub>
+            <span>Github</span>
             <Github name="github" />
+
+            <span>Global</span>
             <Global name="global" />
           </S.SliderHub>
           <S.SliderBlock>-</S.SliderBlock>
         </S.SliderContatiner>
 
         <S.SliderContatiner>
-          <S.SliderLeadingTitle>Ourtube</S.SliderLeadingTitle>
+          <S.SliderLeadingTitle>Trybetunes</S.SliderLeadingTitle>
           <S.SliderSkillStack>ddd</S.SliderSkillStack>
-          <S.SliderImage>
-            {/* <TrybeCourse name="trybecourse" /> */}
+          <S.SliderImage style={{ backgroundColor: "yellow" }}>
+            <MdAccessibilityNew style={{ fontSize: "100px" }} />
+            {/* <TrybeTunes name="trybetunes" /> */}
           </S.SliderImage>
-          <S.SliderHub></S.SliderHub>
+          <S.SliderHub>
+            <span>Github</span>
+            <Github name="github" />
+
+            <span>Global</span>
+            <Global name="global" />
+          </S.SliderHub>
+          <S.SliderBlock>-</S.SliderBlock>
+        </S.SliderContatiner>
+        <S.SliderContatiner>
+          <S.SliderLeadingTitle>Trybetunes</S.SliderLeadingTitle>
+          <S.SliderSkillStack>ddd</S.SliderSkillStack>
+          <S.SliderImage style={{ backgroundColor: "yellow" }}>
+            <MdAccessibilityNew style={{ fontSize: "100px" }} />
+            {/* <TrybeTunes name="trybetunes" /> */}
+          </S.SliderImage>
+          <S.SliderHub>
+            <span>Github</span>
+            <Github name="github" />
+
+            <span>Global</span>
+            <Global name="global" />
+          </S.SliderHub>
           <S.SliderBlock>-</S.SliderBlock>
         </S.SliderContatiner>
 
         <S.SliderContatiner>
-          <S.SliderLeadingTitle>TripUs</S.SliderLeadingTitle>
+          <S.SliderLeadingTitle>Trybetunes</S.SliderLeadingTitle>
           <S.SliderSkillStack>ddd</S.SliderSkillStack>
-          <S.SliderImage>
-            {/* <TrybeCourse name="trybecourse" /> */}
+          <S.SliderImage style={{ backgroundColor: "yellow" }}>
+            <MdAccessibilityNew style={{ fontSize: "100px" }} />
+            {/* <TrybeTunes name="trybetunes" /> */}
           </S.SliderImage>
-          <S.SliderHub></S.SliderHub>
-          <S.SliderBlock>-</S.SliderBlock>
-        </S.SliderContatiner>
+          <S.SliderHub>
+            <span>Github</span>
+            <Github name="github" />
 
-        <S.SliderContatiner>
-          <S.SliderLeadingTitle>YoutubeClone</S.SliderLeadingTitle>
-          <S.SliderSkillStack>ddd</S.SliderSkillStack>
-          <S.SliderImage>
-            {/* <TrybeCourse name="trybecourse" /> */}
-          </S.SliderImage>
-          <S.SliderHub></S.SliderHub>
+            <span>Global</span>
+            <Global name="global" />
+          </S.SliderHub>
           <S.SliderBlock>-</S.SliderBlock>
         </S.SliderContatiner>
       </Slider>
@@ -146,14 +171,7 @@ const SlickSlider = (props) => {
 
 const StyledSlider = styled(Slider)`
   height: 100%;
-  width: 90vw;
-
-  // margin: 5%;
-  .slick-prev::before,
-  .slick-next::before {
-    opacity: 0;
-    display: none;
-  }
+  width: 100%;
 `;
 
 const Pre = styled.div`
@@ -179,7 +197,7 @@ const NextTo = styled.div`
 `;
 const S = {
   SliderContatiner: styled.div`
-    width: 90%;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -201,11 +219,12 @@ const S = {
     // display: flex;
     // padding: 30px 0 20px 0;
     border-radius: 18px;
-    // margin: 0 10px;
+    margin: 0 10px;
   `,
 
   SliderHub: styled.div`
     display: flex;
+    flex-direction: row;
   `,
 
   SliderBlock: styled.div`

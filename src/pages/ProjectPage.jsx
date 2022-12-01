@@ -9,7 +9,7 @@ function ProjectPage() {
         Recent <br /> Project
       </G.ProjectLeading>
       <G.SliderContainer>
-        <SlickSlider />
+        <SlickSlider />{" "}
       </G.SliderContainer>
     </G.ProjectGridContainer>
   );
@@ -17,14 +17,8 @@ function ProjectPage() {
 
 const G = {
   ProjectGridContainer: styled.div`
-    // width: 100%;
-    // height: 100vh;
-    // margin: 0 auto;
-
-    // display: grid;
-    // grid-gap: 2.5em;
-    // grid-template-column: 1fr 1fr 1fr;
-    // grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    height: auto;
+    width: 100%; ;
   `,
 
   ProjectLeading: styled.div`
@@ -46,9 +40,7 @@ const G = {
   `,
 
   SliderContainer: styled.div`
-    display: flex;
-    text-align: center;
-    justify-content: center;
+    width: 100%;
   `,
 };
 

@@ -173,7 +173,7 @@ const G = {
     gap: 25px;
     margin-top: 35px;
     object-fit: cover;
-    // justify-content: center;
+    justify-content: center;
 
     @media (max-width: 768px) {
       display: none;

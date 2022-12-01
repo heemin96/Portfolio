@@ -44,11 +44,14 @@ function App() {
 //G는 Grid
 const G = {
   PageContainer: styled.div`
-  
-  margin:0 90px;
+    margin: 0 6rem;
+
+    @media (max-width: 1024px) {
+      margin: 0;
     }
+
     @media (max-width: 768px) {
-      margin: 0 30px;
+      margin: 0;
       touch-action: pan-y;
     }
   `,
@@ -68,22 +71,16 @@ const G = {
       " project "
       " aboutMe "
       " idea ";
-
-    @media (max-width: 1024px) {
-    }
   `,
 
   /////////////////////////////////////
 
   GridItemNav: styled.div`
     grid-area: header;
-    border-radius: 5px;
-    padding: 30px 0 0 0px;
+    border-radius: 3rem;
+    padding: 2rem 0 0 0px;
     display: grid;
     background-color: white;
-    @media (max-width: 1024px) {
-      // width: 90vw;
-    }
   `,
 
   GridItemIntroduce: styled.div`

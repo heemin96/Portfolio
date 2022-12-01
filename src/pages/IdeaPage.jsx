@@ -77,8 +77,8 @@ const G = {
   FlexColumnContainer: styled.div`
     display: flex;
     flex-direction: column;
-    padding: 0px 0px 0px 64px;
-    margin-top: 30px;
+    padding: 0px 0px 0px 4rem;
+    margin-top: 2rem;
 
     @media (max-width: 1024px) {
       padding: 0;
