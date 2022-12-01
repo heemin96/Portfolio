@@ -2,7 +2,7 @@ import React, { Component, useEffect } from "react";
 import Logo from "../assets/icons/Logo.png";
 import Menubar from "../assets/icons/Menubar.png";
 import M_Memoji from "../assets/icons/M_Memoji.png";
-import M_React from "../assets/icons/M_React_ic.png";
+import M_React from "../assets/icons/M_react_ic.png";
 import M_Node from "../assets/icons/M_Node_ic.png";
 import M_Mysql from "../assets/icons/M_Mysql_ic.png";
 

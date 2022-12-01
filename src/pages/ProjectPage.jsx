@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import React, { Component } from "react";
+import SlickSlider from "../feature/SlickSlider";
 
 function ProjectPage() {
   return (
@@ -7,15 +8,14 @@ function ProjectPage() {
       <G.ProjectLeading>
         Recent <br /> Project
       </G.ProjectLeading>
+      <G.SliderContainer>
+        <SlickSlider />
+      </G.SliderContainer>
     </G.ProjectGridContainer>
   );
 }
 
 const G = {
-  GridItemProject: styled.div`
-    grid-area: project;
-  `,
-
   ProjectGridContainer: styled.div`
     // width: 100%;
     // height: 100vh;
@@ -25,13 +25,6 @@ const G = {
     // grid-gap: 2.5em;
     // grid-template-column: 1fr 1fr 1fr;
     // grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-
-    // grid-template-areas:
-    //   "leading"
-    //   "introduce"
-    //   "project"
-    //   "aboutMe"
-    //   "idea";
   `,
 
   ProjectLeading: styled.div`
@@ -50,6 +43,8 @@ const G = {
       font-weight: 600;
     }
   `,
+
+  SliderContainer: styled.div``,
 };
 
 export default ProjectPage;
