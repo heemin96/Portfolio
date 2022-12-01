@@ -44,7 +44,11 @@ const G = {
     }
   `,
 
-  SliderContainer: styled.div``,
+  SliderContainer: styled.div`
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  `,
 };
 
 export default ProjectPage;

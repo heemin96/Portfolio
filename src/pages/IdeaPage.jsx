@@ -31,7 +31,7 @@ function IdeaPage() {
         </G.FlexColumnContainer>
 
         <G.IdeaImage>
-          <img src={IdeaImage} style={{ borderRadius: "20px" }} />
+          <img src={IdeaImage} style={{ borderRadius: "20px", width: "90%" }} />
         </G.IdeaImage>
       </G.IdeaFlexContainer>
 
@@ -178,7 +178,9 @@ const G = {
 
   GoUpButton: styled.button`
     cursor: pointer;
-    font-size: 80px;
+
+    margin-top: 20px;
+    font-size: 70px;
     background-color: transparent;
     border: none;
     color: white;

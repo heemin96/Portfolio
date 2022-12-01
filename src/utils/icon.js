@@ -1,13 +1,15 @@
 import React, { Component } from "react";
-// import Logo from "../assets/icons/Logo.png";
-// import Menubar from "../assets/icons/Menubar.png";
 
 import { ReactComponent as Memoji } from "../assets/icons/Memoji_ic.svg";
 import { ReactComponent as Rafo } from "../assets/icons/Rafo_logo.svg";
+import { ReactComponent as Ecommerce } from "../assets/images/E_commerce.svg";
+import { ReactComponent as TrybeCourse } from "../assets/images/TrybeCourse.svg";
+import { ReactComponent as TrybeTunes } from "../assets/images/TrybeTunes.svg";
 
 const iconTypes = {
-  // logo:Logo,
-  // menubar:Menubar,
+  ecommerce: Ecommerce,
+  trybecourse: TrybeCourse,
+  trybetunes: TrybeTunes,
   memoji: Memoji,
   rafo: Rafo,
 };

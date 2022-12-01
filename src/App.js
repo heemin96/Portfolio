@@ -87,7 +87,7 @@ const G = {
     display: grid;
     background-color: white;
     @media (max-width: 1024px) {
-      width: 90vw;
+      // width: 90vw;
     }
   `,
 
