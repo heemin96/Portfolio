@@ -78,13 +78,13 @@ const Menu = styled.div`
 `;
 
 const Ul = styled.ul`
-  & > li {
-    margin-bottom: 10px;
-  }
+  // & > li {
+  //   margin-bottom: 10px;
+  // }
 
-  & > li:first-of-type {
-    margin-top: 10px;
-  }
+  // & > li:first-of-type {
+  //   margin-top: 10px;
+  // }
 
   list-style-type: none;
   padding: 0;

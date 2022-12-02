@@ -191,9 +191,7 @@ const SlickSlider = (props) => {
 
 const StyledSlider = styled(Slider)`
   display: grid;
-
   height: 100%;
-  // display: flex;
 `;
 
 const Pre = styled.div`
@@ -208,7 +206,6 @@ const Pre = styled.div`
 
   @media (max-width: 1024px) {
     left: 89%;
-    // margin-top: 14rem;
   }
 
   @media (max-width: 768px) {
@@ -228,10 +225,11 @@ const NextTo = styled.div`
   }
 
   @media (max-width: 768px) {
-    // left: 80%;
     margin-top: 22rem;
   }
 `;
+
+//slick style components
 const S = {
   SliderContatiner: styled.div`
     height: 100%;
@@ -287,15 +285,7 @@ const TrybeTunes = styled(IconComponent)`
   width: 90%;
   margin: 0 auto;
 `;
-const Github = styled(IconComponentPng)`
-  display: block;
-  width: 100%;
-  margin: 0 auto;
-`;
-const Global = styled(IconComponentPng)`
-  display: block;
-  width: 100%;
-  margin: 0 auto;
-`;
+const Github = styled(IconComponentPng)``;
+const Global = styled(IconComponentPng)``;
 
 export default SlickSlider;

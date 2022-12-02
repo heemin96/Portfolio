@@ -35,7 +35,7 @@ function IdeaPage() {
         </G.IdeaImage>
       </G.IdeaFlexContainer>
 
-      <div style={{ display: "flex", flexDirection: "column" }}>
+      <G.JustFlexColumnContatiner>
         <G.GoUpButton onClick={() => window.scrollTo(0, 0)}>
           <BsFillArrowUpCircleFill />
         </G.GoUpButton>
@@ -51,7 +51,7 @@ function IdeaPage() {
           Design by
           <RafoLogo name="rafo" />
         </G.IdeaFooterMobile>
-      </div>
+      </G.JustFlexColumnContatiner>
     </>
   );
 }
@@ -68,10 +68,12 @@ const G = {
       margin-bottom:10px;
       text-align-last: center;
         justify-content: center;
-        
-        
-      
     }
+  `,
+
+  JustFlexColumnContatiner: styled.div`
+    display: flex;
+    flex-direction: column;
   `,
 
   FlexColumnContainer: styled.div`
