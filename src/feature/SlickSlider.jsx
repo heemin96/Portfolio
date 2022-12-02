@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-// import "../styles/global.css";
+import AppButton from "../components/AppButton.jsx";
 
 //Slick
 import Slider from "react-slick";
@@ -26,6 +26,8 @@ const SlickSlider = (props) => {
     speed: 700,
     autoplaySpeed: 1500,
     rows: 1,
+    centerMode: false,
+
     // slidesPerRow: 3,
 
     nextArrow: (
@@ -66,9 +68,12 @@ const SlickSlider = (props) => {
       <Slider {...settings}>
         <S.SliderContatiner>
           <S.SliderLeadingTitle>E-commerce</S.SliderLeadingTitle>
-          <S.SliderSkillStack>ddd</S.SliderSkillStack>
+          <S.SliderSkillStack>
+            <AppButton variant="react">React</AppButton>
+            <AppButton variant="restApi">RestApi</AppButton>
+          </S.SliderSkillStack>
           <S.SliderImage style={{ backgroundColor: "blue" }}>
-            <MdAccessibilityNew style={{ fontSize: "100px" }} />
+            <MdAccessibilityNew style={{ fontSize: "200px" }} />
             {/* <Ecommerce name="ecommerce" /> */}
           </S.SliderImage>
           <S.SliderHub>
@@ -83,9 +88,12 @@ const SlickSlider = (props) => {
 
         <S.SliderContatiner>
           <S.SliderLeadingTitle>Trybe Course</S.SliderLeadingTitle>
-          <S.SliderSkillStack>ddd</S.SliderSkillStack>
+          <S.SliderSkillStack>
+            <AppButton variant="react">React native</AppButton>
+            <AppButton variant="redux">Redux</AppButton>
+          </S.SliderSkillStack>
           <S.SliderImage style={{ backgroundColor: "red" }}>
-            <MdAccessibilityNew style={{ fontSize: "100px" }} />
+            <MdAccessibilityNew style={{ fontSize: "200px" }} />
             {/* <TrybeCourse name="trybecourse" /> */}
           </S.SliderImage>
           <S.SliderHub>
@@ -100,9 +108,14 @@ const SlickSlider = (props) => {
 
         <S.SliderContatiner>
           <S.SliderLeadingTitle>Trybetunes</S.SliderLeadingTitle>
-          <S.SliderSkillStack>ddd</S.SliderSkillStack>
+          <S.SliderSkillStack>
+            <AppButton variant="react">HTML</AppButton>
+            <AppButton variant="css">CSS</AppButton>
+            <AppButton variant="js">JS</AppButton>
+            <AppButton variant="redux">Redux</AppButton>
+          </S.SliderSkillStack>
           <S.SliderImage style={{ backgroundColor: "yellow" }}>
-            <MdAccessibilityNew style={{ fontSize: "100px" }} />
+            <MdAccessibilityNew style={{ fontSize: "200px" }} />
             {/* <TrybeTunes name="trybetunes" /> */}
           </S.SliderImage>
           <S.SliderHub>
@@ -116,10 +129,31 @@ const SlickSlider = (props) => {
         </S.SliderContatiner>
 
         <S.SliderContatiner>
-          <S.SliderLeadingTitle>Trybetunes</S.SliderLeadingTitle>
-          <S.SliderSkillStack>ddd</S.SliderSkillStack>
+          <S.SliderLeadingTitle>Ourtube</S.SliderLeadingTitle>
+          <S.SliderSkillStack>
+            <AppButton variant="css">CSS</AppButton>
+            <AppButton variant="js">JS</AppButton>
+            <AppButton variant="redux">Redux</AppButton>
+          </S.SliderSkillStack>
           <S.SliderImage style={{ backgroundColor: "yellow" }}>
-            <MdAccessibilityNew style={{ fontSize: "100px" }} />
+            <MdAccessibilityNew style={{ fontSize: "200px" }} />
+          </S.SliderImage>
+          <S.SliderHub>
+            <span>Github</span>
+            <Github name="github" />
+            <span>Global</span>
+            <Global name="global" />
+          </S.SliderHub>
+          <S.SliderBlock>-</S.SliderBlock>
+        </S.SliderContatiner>
+        <S.SliderContatiner>
+          <S.SliderLeadingTitle>YoutubeClone</S.SliderLeadingTitle>
+          <S.SliderSkillStack>
+            <AppButton variant="react">React</AppButton>
+            <AppButton variant="restApi">RestApi</AppButton>
+          </S.SliderSkillStack>
+          <S.SliderImage style={{ backgroundColor: "yellow" }}>
+            <MdAccessibilityNew style={{ fontSize: "200px" }} />
             {/* <TrybeTunes name="trybetunes" /> */}
           </S.SliderImage>
           <S.SliderHub>
@@ -131,28 +165,16 @@ const SlickSlider = (props) => {
           </S.SliderHub>
           <S.SliderBlock>-</S.SliderBlock>
         </S.SliderContatiner>
-        <S.SliderContatiner>
-          <S.SliderLeadingTitle>Trybetunes</S.SliderLeadingTitle>
-          <S.SliderSkillStack>ddd</S.SliderSkillStack>
-          <S.SliderImage style={{ backgroundColor: "yellow" }}>
-            <MdAccessibilityNew style={{ fontSize: "100px" }} />
-            {/* <TrybeTunes name="trybetunes" /> */}
-          </S.SliderImage>
-          <S.SliderHub>
-            <span>Github</span>
-            <Github name="github" />
-
-            <span>Global</span>
-            <Global name="global" />
-          </S.SliderHub>
-          <S.SliderBlock>-</S.SliderBlock>
-        </S.SliderContatiner>
 
         <S.SliderContatiner>
-          <S.SliderLeadingTitle>Trybetunes</S.SliderLeadingTitle>
-          <S.SliderSkillStack>ddd</S.SliderSkillStack>
+          <S.SliderLeadingTitle>TripUs</S.SliderLeadingTitle>
+          <S.SliderSkillStack>
+            {" "}
+            <AppButton variant="react">React</AppButton>
+            <AppButton variant="redux">redux</AppButton>
+          </S.SliderSkillStack>
           <S.SliderImage style={{ backgroundColor: "yellow" }}>
-            <MdAccessibilityNew style={{ fontSize: "100px" }} />
+            <MdAccessibilityNew style={{ fontSize: "200px" }} />
             {/* <TrybeTunes name="trybetunes" /> */}
           </S.SliderImage>
           <S.SliderHub>
@@ -170,18 +192,30 @@ const SlickSlider = (props) => {
 };
 
 const StyledSlider = styled(Slider)`
+  display: grid;
+
   height: 100%;
-  width: 100%;
+  // display: flex;
 `;
 
 const Pre = styled.div`
   color: black;
   font-size: 30px;
-  margin-top: 200px;
+  margin-top: 150px;
   left: 91%;
   z-index: 3;
   &:hover {
     color: gray;
+  }
+
+  @media (max-width: 1024px) {
+    left: 89%;
+    // margin-top: 14rem;
+  }
+
+  @media (max-width: 768px) {
+    left: 82%;
+    margin-top: 22rem;
   }
 `;
 
@@ -189,18 +223,23 @@ const NextTo = styled.div`
   color: black;
   font-size: 30px;
   right: 3%;
-  margin-top: 200px;
+  margin-top: 150px;
   z-index: 3;
   &:hover {
     color: gray;
   }
+
+  @media (max-width: 768px) {
+    // left: 80%;
+    margin-top: 22rem;
+  }
 `;
 const S = {
   SliderContatiner: styled.div`
-    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
+    width: 100%;
   `,
 
   SliderLeadingTitle: styled.div`
@@ -216,15 +255,17 @@ const S = {
   `,
 
   SliderImage: styled.div`
-    // display: flex;
-    // padding: 30px 0 20px 0;
+    max-width: 100%;
     border-radius: 18px;
-    margin: 0 10px;
+    margin-right: 10px;
+    text-align: center;
   `,
 
   SliderHub: styled.div`
+    margin-top: 10px;
     display: flex;
     flex-direction: row;
+    gap: 5px;
   `,
 
   SliderBlock: styled.div`
@@ -233,10 +274,30 @@ const S = {
   `,
 };
 
-const Ecommerce = styled(IconComponent)``;
-const TrybeCourse = styled(IconComponent)``;
-const TrybeTunes = styled(IconComponent)``;
-const Github = styled(IconComponentPng)``;
-const Global = styled(IconComponentPng)``;
+const Ecommerce = styled(IconComponent)`
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+`;
+const TrybeCourse = styled(IconComponent)`
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+`;
+const TrybeTunes = styled(IconComponent)`
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+`;
+const Github = styled(IconComponentPng)`
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+`;
+const Global = styled(IconComponentPng)`
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+`;
 
 export default SlickSlider;

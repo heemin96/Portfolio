@@ -64,7 +64,7 @@ const G = {
 
   AboutMeGridContainer: styled.div`
     display: grid;
-    gap: 3em;
+    gap: 1em;
     grid-template-rows: auto;
     grid-template-columns: auto;
 

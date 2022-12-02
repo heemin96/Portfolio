@@ -2,7 +2,7 @@
 import styled from "styled-components";
 import IconComponentPng from "../utils/pngIcon.js";
 import Menubar from "../assets/icons/Menubar.png";
-import DropDownMenu from "../feature/DropDownMenu.js";
+import DropDownMenu from "../feature/DropDownMenu.jsx";
 
 function Navbar() {
   return (
@@ -23,6 +23,7 @@ function Navbar() {
 
 const G = {
   FlexContainer: styled.div`
+    width: 100%;
     display: flex;
     justify-content: space-between;
     margin-bottom: -250px;

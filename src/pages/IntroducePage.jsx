@@ -33,14 +33,6 @@ function IntroducePage() {
 }
 
 const G = {
-  GridItemIntroduce: styled.div`
-    grid-area: introduce;
-    background: linear-gradient(99.03deg, #fbed96 -1%, #abecd6 92.31%);
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1),
-      0px 23px 30px rgba(171, 236, 214, 0.2);
-    border-radius: 44px;
-  `,
-
   IntroduceFlexContainer: styled.div`
     display: flex;
     flex-direction: column;

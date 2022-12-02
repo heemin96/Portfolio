@@ -8,18 +8,14 @@ function ProjectPage() {
       <G.ProjectLeading>
         Recent <br /> Project
       </G.ProjectLeading>
-      <G.SliderContainer>
-        <SlickSlider />{" "}
-      </G.SliderContainer>
+
+      <SlickSlider />
     </G.ProjectGridContainer>
   );
 }
 
 const G = {
-  ProjectGridContainer: styled.div`
-    height: auto;
-    width: 100%; ;
-  `,
+  ProjectGridContainer: styled.div``,
 
   ProjectLeading: styled.div`
     font-size: 92px;
@@ -39,9 +35,7 @@ const G = {
     }
   `,
 
-  SliderContainer: styled.div`
-    width: 100%;
-  `,
+  SliderContainer: styled.div``,
 };
 
 export default ProjectPage;

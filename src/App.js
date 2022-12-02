@@ -9,6 +9,7 @@ import IntroducePage from "./pages/IntroducePage";
 import ProjectPage from "./pages/ProjectPage";
 import AboutMePage from "./pages/AboutMePage";
 import IdeaPage from "./pages/IdeaPage";
+import SlickSlider from "./feature/SlickSlider";
 
 function App() {
   return (
@@ -44,33 +45,28 @@ function App() {
 //G는 Grid
 const G = {
   PageContainer: styled.div`
-    margin: 0 6rem;
-
-    @media (max-width: 1024px) {
-      margin: 0;
-    }
+    margin: 0 5rem;
+    justify-content: center;
 
     @media (max-width: 768px) {
-      margin: 0;
-      touch-action: pan-y;
+      margin: 0 2rem;
     }
   `,
 
   GridContainer: styled.div`
-    width: 100%;
-    height: 100vh;
+    max-width: 100%;
     justify-content: center;
     display: grid;
     grid-gap: 2.5em;
     grid-template-rows: auto;
-    // grid-template-columns: 1fr;
+    grid-template-columns: auto;
 
     grid-template-areas:
-      " header "
-      " introduce "
-      " project "
-      " aboutMe "
-      " idea ";
+      "header"
+      "introduce"
+      "project"
+      "aboutMe"
+      "idea";
   `,
 
   /////////////////////////////////////
@@ -108,8 +104,9 @@ const G = {
     border-radius: 48px 48px 0px 0px;
     padding: 104px 0px 28px 0px;
 
-    @media (max-width: 1024px) {    
-      padding: 60px 0px 28px 0px;
+    //   @media (max-width: 1024px) {
+    //     padding: 60px 0px 28px 0px;
+    //
   `,
 
   // GoUpButton: styled.button`
