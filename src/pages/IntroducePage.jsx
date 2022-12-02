@@ -10,11 +10,6 @@ function IntroducePage() {
         <MemojiIcon name="memoji" />
       </G.IntroduceProfileImage>
       <G.IntroduceContent1>Hi i'm Daniel 🤙</G.IntroduceContent1>
-
-      {/* <G.StraightLine>
-          <img src={StraightLine} />
-        </G.StraightLine> */}
-
       <G.IntroduceContent2>
         I <span />
         <G.BlueText>develop</G.BlueText>
@@ -47,23 +42,21 @@ const G = {
   IntroduceContent1: styled.div`
     font-family: Nunito;
     font-weight: 600;
-    font-size: 44px;
+    font-size: calc(12px + 1.5vw);
     line-height: 60px;
     letter: -6%;
     margin: 20px 0;
 
-    @media (max-width: 1024px) {
-      font-size: 34px;
-      line-height: 30px;
-      letter: -6%;
-      font-weight: 600;
-    }
+    // @media (max-width: 1024px) {
+    //   line-height: 30px;
+    //   letter: -6%;
+    //   font-weight: 600;
+    // }
 
     @media (max-width: 768px) {
-      font-size: 22px;
-      line-height: 30px;
-      letter: -6%;
-      font-weight: 600;
+      // line-height: 30px;
+      // letter: -6%;
+      // font-weight: 600;
       margin: 0;
     }
   `,
@@ -71,20 +64,19 @@ const G = {
   IntroduceContent2: styled.div`
     font-family: Poppins;
     font-weight: 700;
-    font-size: 60px;
-    line-height: 71px;
+    font-size: calc(16px + 2.5vw);
+    line-height: 80px;
     text-align: center;
 
     @media (max-width: 1024px) {
-      font-size: 40px;
-      font-weight: 600;
+      // font-size: 40px;
+      // font-weight: 600;
       line-height: 60px;
     }
 
     @media (max-width: 768px) {
-      font-size: 30px;
-      line-height: 38px;
-      font-weight: 600;
+      // font-size: 30px;
+
       line-height: 50px;
     }
   `,

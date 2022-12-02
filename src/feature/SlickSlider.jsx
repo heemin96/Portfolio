@@ -43,7 +43,6 @@ const SlickSlider = (props) => {
 
     responsive: [
       // 반응형 웹 구현 옵션
-
       {
         breakpoint: 1024,
         settings: {
@@ -53,7 +52,7 @@ const SlickSlider = (props) => {
         },
       },
       {
-        breakpoint: 768, //화면 사이즈 768px
+        breakpoint: 768,
         settings: {
           rows: 2,
           slidesPerRow: 1,
@@ -135,7 +134,7 @@ const SlickSlider = (props) => {
             <AppButton variant="js">JS</AppButton>
             <AppButton variant="redux">Redux</AppButton>
           </S.SliderSkillStack>
-          <S.SliderImage style={{ backgroundColor: "yellow" }}>
+          <S.SliderImage style={{ backgroundColor: "gray" }}>
             <MdAccessibilityNew style={{ fontSize: "200px" }} />
           </S.SliderImage>
           <S.SliderHub>
@@ -169,7 +168,6 @@ const SlickSlider = (props) => {
         <S.SliderContatiner>
           <S.SliderLeadingTitle>TripUs</S.SliderLeadingTitle>
           <S.SliderSkillStack>
-            {" "}
             <AppButton variant="react">React</AppButton>
             <AppButton variant="redux">redux</AppButton>
           </S.SliderSkillStack>

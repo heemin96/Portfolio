@@ -1,12 +1,12 @@
 import styled, { css } from "styled-components";
 
-function AppButton({ disabled, children, variant }) {
+function AppButton({ children, variant }) {
   const variantStyle = VARIANTS[variant];
 
   return (
-    <StyledButton disabled={disabled} variantStyle={variantStyle}>
-      {children}
-    </StyledButton>
+    <>
+      <StyledButton variantStyle={variantStyle}>{children}</StyledButton>
+    </>
   );
 }
 
@@ -37,7 +37,6 @@ const VARIANTS = {
 const StyledButton = styled.button`
   ${(p) => p.variantStyle}
   max-width:500px;
-  max-height: 500px;
   margin: 10px 10px 10px 0;
   padding: 0.5rem 1rem 0.5rem 1rem;
   border: none;
@@ -47,12 +46,6 @@ const StyledButton = styled.button`
   border-radius: 32px;
   background: var(--button-bg-color, #0d6efd);
   color: var(--button-color, #ffffff);
-
-  &:disabled {
-    cursor: default;
-    opacity: 0.5;
-    background: var(--button-bg-color, #025ce2);
-  }
 `;
 
 export default AppButton;

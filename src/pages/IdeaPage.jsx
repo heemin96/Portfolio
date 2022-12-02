@@ -86,16 +86,17 @@ const G = {
   `,
 
   IdeaLeadingTitles: styled.div`
-    font-family: poppins;
-    font-size: 92px;
+    font-size: calc(12px + 4.5vw);
     line-height: 82px;
-    font-weight: 600;
+    font-weight: 700;
     font-family: Poppins;
+    margin-bottom: 50px;
 
     @media (max-width: 768px) {
-      font-size: 56px;
-      line-height: 50px;
+      font-size: calc(40px + 4.5vw);
+      line-height: 60px;
       font-weight: 600;
+      margin-top: 0;
     }
   `,
 

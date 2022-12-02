@@ -94,18 +94,19 @@ const G = {
 
   AboutMeLeadingTitle: styled.div`
     grid-area: aboutMeLeadingTitle;
-    font-size: 92px;
+    font-size: calc(12px + 4.5vw);
     line-height: 82px;
     font-weight: 700;
     font-family: Poppins;
+    margin-bottom: 50px;
 
     @media (max-width: 1024px) {
-      font-size: 66px;
+      line-height: 45px;
     }
 
     @media (max-width: 768px) {
-      font-size: 56px;
-      line-height: 50px;
+      font-size: calc(40px + 4.5vw);
+      line-height: 60px;
       font-weight: 600;
     }
   `,
@@ -115,8 +116,12 @@ const G = {
     z-index: -1;
     margin-top: 100px;
 
+    @media (max-width: 1024px) {
+      margin-top: 40px;
+    }
+
     @media (max-width: 768px) {
-      margin-top: 50px;
+      margin-top: 70px;
     }
   `,
 
@@ -163,6 +168,17 @@ const G = {
   `,
 
   AboutMeSkillsLeadingTitle: styled.div`
+    font-size: calc(12px + 4.5vw);
+    line-height: 82px;
+    font-weight: 700;
+    font-family: Poppins;
+    margin-bottom: 50px;
+
+    @media (max-width: 768px) {
+      font-size: calc(40px + 4.5vw);
+      line-height: 60px;
+      font-weight: 600;
+    }
     @media (max-width: 1024px) {
       margin-top: 50px;
     }
@@ -223,10 +239,6 @@ const M_ReactIcon = styled(IconComponentPng)`
 const M_NodeIcon = styled(IconComponentPng)`
   display: none;
 
-  @media (amx-width: 1024px) {
-    display: none;
-  }
-
   @media (max-width: 768px) {
     display: flex;
   }
@@ -234,10 +246,6 @@ const M_NodeIcon = styled(IconComponentPng)`
 
 const M_MysqlIcon = styled(IconComponentPng)`
   display: none;
-
-  @media (amx-width: 1024px) {
-    display: none;
-  }
 
   @media (max-width: 768px) {
     display: flex;

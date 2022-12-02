@@ -18,18 +18,19 @@ const G = {
   ProjectGridContainer: styled.div``,
 
   ProjectLeading: styled.div`
-    font-size: 92px;
+    // font-size: 92px;
+    font-size: calc(12px + 4.5vw);
     line-height: 82px;
     font-weight: 700;
     font-family: Poppins;
     margin-bottom: 50px;
 
     @media (max-width: 1024px) {
-      font-size: 66px;
+      line-height: 45px;
     }
 
     @media (max-width: 768px) {
-      font-size: 56px;
+      font-size: calc(40px + 4.5vw);
       line-height: 50px;
       font-weight: 600;
     }

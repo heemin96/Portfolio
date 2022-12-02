@@ -45,12 +45,8 @@ function App() {
 //G는 Grid
 const G = {
   PageContainer: styled.div`
-    margin: 0 5rem;
+    margin: 0 10%;
     justify-content: center;
-
-    @media (max-width: 768px) {
-      margin: 0 2rem;
-    }
   `,
 
   GridContainer: styled.div`
@@ -81,7 +77,14 @@ const G = {
 
   GridItemIntroduce: styled.div`
     grid-area: introduce;
-    background: linear-gradient(99.03deg, #fbed96 -1%, #abe 92.31%);
+    background-color: #dcd9d4;
+    background-image: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, #efeeec 75%, #e9e9e7 100%);
+      radial-gradient(
+        50% 100%,
+        rgba(255, 255, 255, 0.3) 0%,
+        rgba(0, 0, 0, 0.3) 100%
+      );
+    background-blend-mode: normal, lighten, soft-light;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1),
       0px 23px 30px rgba(171, 236, 214, 0.2);
     border-radius: 44px;
@@ -104,9 +107,9 @@ const G = {
     border-radius: 48px 48px 0px 0px;
     padding: 104px 0px 28px 0px;
 
-    //   @media (max-width: 1024px) {
-    //     padding: 60px 0px 28px 0px;
-    //
+      @media (max-width: 768px) {
+        padding: 30px 0px 28px 0px;
+    
   `,
 
   // GoUpButton: styled.button`
