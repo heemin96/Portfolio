@@ -65,8 +65,6 @@ const G = {
       "idea";
   `,
 
-  /////////////////////////////////////
-
   GridItemNav: styled.div`
     grid-area: header;
     border-radius: 3rem;
