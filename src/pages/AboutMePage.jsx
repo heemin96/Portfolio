@@ -10,54 +10,57 @@ import OrangeRightArrow from "../assets/icons/OrangeRightArrow.png";
 
 function AboutMePage() {
   return (
-    <G.GridItemAboutMe id="3">
-      <G.AboutMeGridContainer>
-        <G.AboutMeLeadingTitle>
-          <G.OrangeRightArrow>
+    <W.GridItemAboutMe id="3">
+      <W.AboutMeGridContainer>
+        <W.AboutMeLeadingTitle>
+          <W.OrangeRightArrow>
             <img src={OrangeRightArrow} />
-          </G.OrangeRightArrow>
+          </W.OrangeRightArrow>
           About <br /> Me
-        </G.AboutMeLeadingTitle>
-        <G.AboutMeLeading>
+        </W.AboutMeLeadingTitle>
+        <W.AboutMeLeading>
           <div style={{ display: "flex" }}>
-            <G.AboutMeLine>
+            <W.AboutMeLine>
               Tenho 20 anos, estou em transição de carreira,
               <br /> vindo da área administrativa onde desenvolvi
               <br /> experiência com gestão de <br />
               pessoas, gestão de empresas
               <br /> e negociação com cliente.
               <br /> Hoje construo aplicações fullstack!
-            </G.AboutMeLine>
+            </W.AboutMeLine>
           </div>
-        </G.AboutMeLeading>
-        <G.AboutMeMemoji>
+        </W.AboutMeLeading>
+        <W.AboutMeMemoji>
           <img src={AboutMeMemoji} />
-        </G.AboutMeMemoji>
+        </W.AboutMeMemoji>
 
-        <G.MAboutMeMemoji>
-          <MAboutMeMemojiIcon name="m_memoji"></MAboutMeMemojiIcon>
-        </G.MAboutMeMemoji>
+        <M.AboutMeMemoji>
+          <M_AboutMeMemojiIcon name="m_memoji"></M_AboutMeMemojiIcon>
+        </M.AboutMeMemoji>
 
-        <G.AboutMeSkills>
-          <G.AboutMeSkillsLeadingTitle>Skills</G.AboutMeSkillsLeadingTitle>
-          <G.AboutMeSkillsIconContainer>
+        <W.AboutMeSkills>
+          <W.AboutMeSkillsLeadingTitle>Skills</W.AboutMeSkillsLeadingTitle>
+          <W.AboutMeSkillsIconContainer>
             <img src={ReactIcon} />
             <img src={NodeIcon} />
             <img src={MysqlIcon} />
-          </G.AboutMeSkillsIconContainer>
+          </W.AboutMeSkillsIconContainer>
 
-          <G.MAboutMeSkillsIconContainer>
+          <M.AboutMeSkillsIconContainer>
             <M_ReactIcon name="m_react" />
             <M_NodeIcon name="m_node" />
             <M_MysqlIcon name="m_mysql" />
-          </G.MAboutMeSkillsIconContainer>
-        </G.AboutMeSkills>
-      </G.AboutMeGridContainer>
-    </G.GridItemAboutMe>
+          </M.AboutMeSkillsIconContainer>
+        </W.AboutMeSkills>
+      </W.AboutMeGridContainer>
+    </W.GridItemAboutMe>
   );
 }
 
-const G = {
+//W는 Web
+//M는 Mobile
+
+const W = {
   GridItemAboutMe: styled.div`
     grid-area: aboutMe;
   `,
@@ -149,16 +152,6 @@ const G = {
     }
   `,
 
-  MAboutMeMemoji: styled.div`
-    grid-area: aboutMeMemoji;
-    justify-self: end;
-    display: none;
-
-    @media (max-width: 768px) {
-      display: flex;
-      justify-self: center;
-    }
-  `,
   AboutMeSkills: styled.div`
     grid-area: skills;
     font-family: poppins;
@@ -195,8 +188,23 @@ const G = {
       display: none;
     }
   `,
+};
 
-  MAboutMeSkillsIconContainer: styled.div`
+///////////아래부터 모바일///////////////
+
+const M = {
+  AboutMeMemoji: styled.div`
+    grid-area: aboutMeMemoji;
+    justify-self: end;
+    display: none;
+
+    @media (max-width: 768px) {
+      display: flex;
+      justify-self: center;
+    }
+  `,
+
+  AboutMeSkillsIconContainer: styled.div`
     display: none;
     gap: 25px;
     margin-top: 35px;
@@ -212,10 +220,10 @@ const G = {
   `,
 };
 
-const MAboutMeMemojiIcon = styled(IconComponentPng)`
+const M_AboutMeMemojiIcon = styled(IconComponentPng)`
   display: none;
 
-  @media (amx-width: 768px) {
+  @media (max-width: 768px) {
     display: none;
   }
 
@@ -227,7 +235,7 @@ const MAboutMeMemojiIcon = styled(IconComponentPng)`
 const M_ReactIcon = styled(IconComponentPng)`
   display: none;
 
-  @media (amx-width: 1024px) {
+  @media (max-width: 1024px) {
     display: none;
   }
 

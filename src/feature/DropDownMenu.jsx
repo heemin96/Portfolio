@@ -4,33 +4,33 @@ import { Link } from "react-scroll";
 import styled, { css } from "styled-components";
 
 const DropDownMenu = () => {
-  const [myPageIsOpen, myPageRef, myPageHandler] = useDetectClose(false);
+  const [IsOpen, Ref, removeHandler] = useDetectClose(false);
 
   return (
     <Wrapper>
       <DropdownContainer>
-        <DropdownButton onClick={myPageHandler} ref={myPageRef}>
+        <DropdownButton onClick={removeHandler} ref={Ref}>
           <MenuBar name="menubar" />
+          <Menu isDropped={IsOpen}>
+            <Ul>
+              <Link to="1" spy={true} smooth={true}>
+                <Li style={{ color: "black" }}>Introdice</Li>
+              </Link>
+
+              <Link to="2" spy={true} smooth={true}>
+                <Li style={{ color: "blue" }}>Project</Li>
+              </Link>
+
+              <Link to="3" spy={true} smooth={true}>
+                <Li style={{ color: "red" }}>AboutMe</Li>
+              </Link>
+
+              <Link to="4" spy={true} smooth={true}>
+                <Li style={{ color: "green" }}>Idea</Li>
+              </Link>
+            </Ul>
+          </Menu>
         </DropdownButton>
-        <Menu isDropped={myPageIsOpen}>
-          <Ul>
-            <Link to="1" spy={true} smooth={true}>
-              <Li style={{ color: "black" }}>Introdice</Li>
-            </Link>
-
-            <Link to="2" spy={true} smooth={true}>
-              <Li style={{ color: "blue" }}>Project</Li>
-            </Link>
-
-            <Link to="3" spy={true} smooth={true}>
-              <Li style={{ color: "red" }}>AboutMe</Li>
-            </Link>
-
-            <Link to="4" spy={true} smooth={true}>
-              <Li style={{ color: "green" }}>Idea</Li>
-            </Link>
-          </Ul>
-        </Menu>
       </DropdownContainer>
     </Wrapper>
   );
@@ -49,8 +49,6 @@ const DropdownButton = styled.div`
 
 const Menu = styled.div`
   background: #ffffff;
-  box-shadow: 0px 20px 25px -5px rgba(0, 0, 0, 0.02),
-    0px 10px 10px -5px rgba(0, 0, 0, 0.04);
   border-radius: 18px;
   position: relative;
   right: 0;
@@ -68,6 +66,7 @@ const Menu = styled.div`
     width: 130px;
   }
 
+  //조건부 스타일 생성
   ${({ isDropped }) =>
     isDropped &&
     css`
@@ -78,14 +77,6 @@ const Menu = styled.div`
 `;
 
 const Ul = styled.ul`
-  & > li {
-    margin-bottom: 10px;
-  }
-
-  & > li:first-of-type {
-    margin-top: 10px;
-  }
-
   list-style-type: none;
   padding: 0;
   margin: 20px;

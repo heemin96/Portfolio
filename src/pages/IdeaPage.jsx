@@ -10,53 +10,56 @@ import { BsFillArrowUpCircleFill } from "react-icons/bs";
 function IdeaPage() {
   return (
     <>
-      <G.IdeaFlexContainer id="4">
-        <G.FlexColumnContainer>
-          <G.IdeaLeadingTitles>
+      <W.IdeaFlexContainer id="4">
+        <W.FlexColumnContainer>
+          <W.IdeaLeadingTitles>
             Is there a
             <br />
             idea?
-          </G.IdeaLeadingTitles>
-          <G.IdeaSubLeadingTitles>
+          </W.IdeaLeadingTitles>
+          <W.IdeaSubLeadingTitles>
             Let's build it
             <br />
             together!
-          </G.IdeaSubLeadingTitles>
+          </W.IdeaSubLeadingTitles>
 
-          <G.IdeaEmail>khk8300@naver.com</G.IdeaEmail>
-          <G.IdeaIcon>
+          <W.IdeaEmail>khk8300@naver.com</W.IdeaEmail>
+          <W.IdeaIcon>
             <img src={TwitterIcon} />
             <img src={InIcon} />
-          </G.IdeaIcon>
-        </G.FlexColumnContainer>
+          </W.IdeaIcon>
+        </W.FlexColumnContainer>
 
-        <G.IdeaImage>
+        <W.IdeaImage>
           <img src={IdeaImage} style={{ borderRadius: "20px", width: "90%" }} />
-        </G.IdeaImage>
-      </G.IdeaFlexContainer>
+        </W.IdeaImage>
+      </W.IdeaFlexContainer>
 
-      <G.JustFlexColumnContatiner>
-        <G.GoUpButton onClick={() => window.scrollTo(0, 0)}>
+      <W.JustFlexColumnContainer>
+        <W.GoUpButton onClick={() => window.scrollTo(0, 0)}>
           <BsFillArrowUpCircleFill />
-        </G.GoUpButton>
-        <G.IdeaFooter>
+        </W.GoUpButton>
+        <W.IdeaFooter>
           Developed by Alessandro Achtenberg | Design by
           <br></br>
           <RafoLogo name="rafo" />
-        </G.IdeaFooter>
+        </W.IdeaFooter>
 
-        <G.IdeaFooterMobile>
+        <M.IdeaFooterMobile>
           Developed by Alessandro Achtenberg
           <br />
           Design by
           <RafoLogo name="rafo" />
-        </G.IdeaFooterMobile>
-      </G.JustFlexColumnContatiner>
+        </M.IdeaFooterMobile>
+      </W.JustFlexColumnContainer>
     </>
   );
 }
 
-const G = {
+//W는 Web
+//M은 Mobile
+
+const W = {
   IdeaFlexContainer: styled.div`
     display: flex;
     flex-direction: row;
@@ -71,7 +74,7 @@ const G = {
     }
   `,
 
-  JustFlexColumnContatiner: styled.div`
+  JustFlexColumnContainer: styled.div`
     display: flex;
     flex-direction: column;
   `,
@@ -88,7 +91,7 @@ const G = {
   `,
 
   IdeaLeadingTitles: styled.div`
-    font-size: calc(12px + 4.5vw);
+    font-size: calc(30px + 4.5vw);
     line-height: 82px;
     font-weight: 700;
     font-family: Poppins;
@@ -131,7 +134,7 @@ const G = {
   `,
 
   IdeaImage: styled.div`
-    padding: 0 60px 0 0;
+    padding: 0 20px 0 0;
     @media (max-width: 1024px) {
       display: none;
     }
@@ -202,5 +205,28 @@ const G = {
 const RafoLogo = styled(IconComponent)`
   align-self: center;
 `;
+
+///////////아래부터 모바일///////////////
+
+const M = {
+  IdeaFooterMobile: styled.div`
+    display: none;
+    @media (max-width: 1024px) {
+      display: flex;
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 30px;
+      text-align: center;
+      color: #ffffff;
+      // padding-top: 130px;
+      padding-bottom: 0;
+      margin-bottom: 0;
+      justify-content: center;
+      flex-direction: column;
+    }
+  `,
+};
 
 export default IdeaPage;

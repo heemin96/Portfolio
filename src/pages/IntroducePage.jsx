@@ -5,29 +5,29 @@ import RightVector from "../assets/icons/RightVector.png";
 
 function IntroducePage() {
   return (
-    <G.IntroduceFlexContainer>
-      <G.IntroduceProfileImage id="1">
+    <W.IntroduceFlexContainer>
+      <W.IntroduceProfileImage id="1">
         <MemojiIcon name="memoji" />
-      </G.IntroduceProfileImage>
-      <G.IntroduceContent1>Hi i'm Daniel 🤙</G.IntroduceContent1>
-      <G.IntroduceContent2>
+      </W.IntroduceProfileImage>
+      <W.IntroduceContent1>Hi i'm Daniel 🤙</W.IntroduceContent1>
+      <W.IntroduceContent2>
         I <span />
-        <G.BlueText>develop</G.BlueText>
+        <W.BlueText>develop</W.BlueText>
         <br /> ideas and help
         <br /> build a better world <br /> through <br /> software.
-      </G.IntroduceContent2>
+      </W.IntroduceContent2>
 
-      <G.IntroduceContent3>
-        <G.BlackButton>Contact</G.BlackButton>
-        <G.TransParentButton>
+      <W.IntroduceContent3>
+        <W.BlackButton>Contact</W.BlackButton>
+        <W.TransParentButton>
           Download CV <img src={RightVector} />
-        </G.TransParentButton>
-      </G.IntroduceContent3>
-    </G.IntroduceFlexContainer>
+        </W.TransParentButton>
+      </W.IntroduceContent3>
+    </W.IntroduceFlexContainer>
   );
 }
 
-const G = {
+const W = {
   IntroduceFlexContainer: styled.div`
     display: flex;
     flex-direction: column;

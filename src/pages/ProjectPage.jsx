@@ -4,17 +4,16 @@ import SlickSlider from "../feature/SlickSlider";
 
 function ProjectPage() {
   return (
-    <G.ProjectGridContainer id="2">
-      <G.ProjectLeading>
+    <W.ProjectGridContainer id="2">
+      <W.ProjectLeading>
         Recent <br /> Project
-      </G.ProjectLeading>
-
+      </W.ProjectLeading>
       <SlickSlider />
-    </G.ProjectGridContainer>
+    </W.ProjectGridContainer>
   );
 }
 
-const G = {
+const W = {
   ProjectGridContainer: styled.div``,
 
   ProjectLeading: styled.div`
