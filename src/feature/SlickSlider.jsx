@@ -9,7 +9,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 // 아이콘
 import IconComponentPng from "../utils/pngIcon.js";
-import IconComponent from "../utils/icon.js";
+import IconComponent from "../utils/svgIcon.js";
 import { BsFillArrowLeftCircleFill } from "react-icons/bs";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import { MdAccessibilityNew } from "react-icons/md";

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import React from "react";
-import IconComponent from "../utils/icon";
+import IconComponent from "../utils/svgIcon";
 
 import IdeaImage from "../assets/icons/IdeaImage.png";
 import TwitterIcon from "../assets/icons/Twitter_ic.png";

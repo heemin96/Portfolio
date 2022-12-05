@@ -1,11 +1,7 @@
 import styled from "styled-components";
-import IconComponent from "../utils/icon.js";
+import IconComponent from "../utils/svgIcon.js";
 import IconComponentPng from "../utils/pngIcon.js";
 import React, { Component } from "react";
-import AboutMeMemoji from "../assets/icons/AboutMe_Memoji.png";
-import ReactIcon from "../assets/icons/React_ic.png";
-import NodeIcon from "../assets/icons/Node_ic.png";
-import MysqlIcon from "../assets/icons/Mysql_ic.png";
 import OrangeRightArrow from "../assets/icons/OrangeRightArrow.png";
 
 function AboutMePage() {
@@ -14,7 +10,8 @@ function AboutMePage() {
       <W.AboutMeGridContainer>
         <W.AboutMeLeadingTitle>
           <W.OrangeRightArrow>
-            <img src={OrangeRightArrow} />
+            {/* <OrangeRightArrow name="orangeRightArrow" /> */}
+            <img src={OrangeRightArrow} alt="none" />
           </W.OrangeRightArrow>
           About <br /> Me
         </W.AboutMeLeadingTitle>
@@ -31,7 +28,7 @@ function AboutMePage() {
           </div>
         </W.AboutMeLeading>
         <W.AboutMeMemoji>
-          <img src={AboutMeMemoji} />
+          <WebAboutMeMemoji name="aboutMe_Memoji" />
         </W.AboutMeMemoji>
 
         <M.AboutMeMemoji>
@@ -41,9 +38,9 @@ function AboutMePage() {
         <W.AboutMeSkills>
           <W.AboutMeSkillsLeadingTitle>Skills</W.AboutMeSkillsLeadingTitle>
           <W.AboutMeSkillsIconContainer>
-            <img src={ReactIcon} />
-            <img src={NodeIcon} />
-            <img src={MysqlIcon} />
+            <ReactIcon name="react" />
+            <NodeIcon name="node" />
+            <MysqlIcon name="mysql" />
           </W.AboutMeSkillsIconContainer>
 
           <M.AboutMeSkillsIconContainer>
@@ -190,6 +187,11 @@ const W = {
   `,
 };
 
+const WebAboutMeMemoji = styled(IconComponentPng)``;
+const MysqlIcon = styled(IconComponentPng)``;
+const NodeIcon = styled(IconComponentPng)``;
+const ReactIcon = styled(IconComponentPng)``;
+
 ///////////아래부터 모바일///////////////
 
 const M = {
@@ -219,6 +221,18 @@ const M = {
     }
   `,
 };
+
+// const OrangeRightArrow = styled(IconComponentPng)`
+//   display: none;
+
+//   @media (max-width: 768px) {
+//     display: none;
+//   }
+
+//   @media (max-width: 768px) {
+//     display: flex;
+//   }
+// `;
 
 const M_AboutMeMemojiIcon = styled(IconComponentPng)`
   display: none;

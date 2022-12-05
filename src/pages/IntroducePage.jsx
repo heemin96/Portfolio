@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import IconComponent from "../utils/icon.js";
+import IconComponent from "../utils/svgIcon.js";
 import React, { Component } from "react";
 import RightVector from "../assets/icons/RightVector.png";
 
