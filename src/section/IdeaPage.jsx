@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import React from "react";
 import IconComponent from "../utils/svgIcon";
+import { Link } from "react-scroll";
 
-import IdeaImage from "../assets/icons/IdeaImage.png";
-import TwitterIcon from "../assets/icons/Twitter_ic.png";
-import InIcon from "../assets/icons/In_ic.png";
+import IdeaImage from "../assets/images/IdeaImage.png";
+import TwitterIcon from "../assets/images/Twitter_ic.png";
+import InIcon from "../assets/images/In_ic.png";
 import { BsFillArrowUpCircleFill } from "react-icons/bs";
 
 function IdeaPage() {
@@ -36,9 +37,11 @@ function IdeaPage() {
       </W.IdeaFlexContainer>
 
       <W.JustFlexColumnContainer>
-        <W.GoUpButton onClick={() => window.scrollTo(0, 0)}>
-          <BsFillArrowUpCircleFill />
-        </W.GoUpButton>
+        <Link to="5" spy={true} smooth={true}>
+          <W.GoUpButton>
+            <BsFillArrowUpCircleFill />
+          </W.GoUpButton>
+        </Link>
         <W.IdeaFooter>
           Developed by Alessandro Achtenberg | Design by
           <br></br>
@@ -91,7 +94,7 @@ const W = {
   `,
 
   IdeaLeadingTitles: styled.div`
-    font-size: calc(30px + 4.5vw);
+    font-size: calc(10px + 4vw);
     line-height: 82px;
     font-weight: 700;
     font-family: Poppins;
@@ -184,7 +187,6 @@ const W = {
 
   GoUpButton: styled.button`
     cursor: pointer;
-
     margin-top: 20px;
     font-size: 70px;
     background-color: transparent;

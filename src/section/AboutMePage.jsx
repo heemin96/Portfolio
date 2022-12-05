@@ -1,18 +1,16 @@
+import React, { Component } from "react";
+import { Link } from "react-scroll";
+
 import styled from "styled-components";
 import IconComponent from "../utils/svgIcon.js";
 import IconComponentPng from "../utils/pngIcon.js";
-import React, { Component } from "react";
-import OrangeRightArrow from "../assets/icons/OrangeRightArrow.png";
+import OrangeRightArrow from "../assets/images/OrangeRightArrow.png";
 
 function AboutMePage() {
   return (
     <W.GridItemAboutMe id="3">
       <W.AboutMeGridContainer>
         <W.AboutMeLeadingTitle>
-          <W.OrangeRightArrow>
-            {/* <OrangeRightArrow name="orangeRightArrow" /> */}
-            <img src={OrangeRightArrow} alt="none" />
-          </W.OrangeRightArrow>
           About <br /> Me
         </W.AboutMeLeadingTitle>
         <W.AboutMeLeading>
@@ -36,7 +34,7 @@ function AboutMePage() {
           <M_AboutMeMemojiIcon name="m_memoji"></M_AboutMeMemojiIcon>
         </M.AboutMeMemoji>
 
-        {/* Skil 섹션 */}
+        {/* Skill 섹션 */}
         <W.AboutMeSkills>
           <W.AboutMeSkillsLeadingTitle>Skills</W.AboutMeSkillsLeadingTitle>
           {/* 웹용 아이콘 */}
@@ -77,16 +75,7 @@ const W = {
       "aboutMeLeading aboutMeMemoji"
       "skills aboutMeMemoji";
 
-    ${({ theme }) => theme.device.tablet} {
-      gap: 0;
-      grid-template-areas:
-        "aboutMeLeadingTitle"
-        "aboutMeMemoji"
-        "aboutMeLeading "
-        "skills";
-    }
-
-    @media (max-width: 768px) {
+    ${({ theme }) => theme.device.mobile} {
       gap: 0;
       grid-template-areas:
         "aboutMeLeadingTitle"
@@ -102,7 +91,6 @@ const W = {
     font-size: ${({ theme }) => theme.fontSize.title};
     line-height: ${({ theme }) => theme.lineHeight.title};
     font-weight: ${({ theme }) => theme.fontWeight.title};
-    margin-bottom: 50px;
 
     ${({ theme }) => theme.device.tablet} {
       line-height: 45px;
@@ -118,7 +106,7 @@ const W = {
   OrangeRightArrow: styled.div`
     position: absolute;
     z-index: -1;
-    margin-top: 100px;
+    margin-top: 90px;
 
     ${({ theme }) => theme.device.tablet} {
       margin-top: 40px;
@@ -163,6 +151,7 @@ const W = {
     font-weight: 700;
     font-size: 52px;
     line-height: 46.8px;
+    width: 100%;
   `,
 
   AboutMeSkillsLeadingTitle: styled.div`
@@ -170,7 +159,7 @@ const W = {
     font-size: ${({ theme }) => theme.fontSize.title};
     line-height: ${({ theme }) => theme.lineHeight.title};
     font-weight: ${({ theme }) => theme.fontWeight.title};
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 
     ${({ theme }) => theme.device.tablet} {
       line-height: 45px;
@@ -186,21 +175,27 @@ const W = {
 
   AboutMeSkillsIconContainer: styled.div`
     display: flex;
-    gap: 25px;
-    margin-top: 35px;
-    object-fit: cover;
-    justify-content: center;
-
+    justify-content: space-between;
+    gap: 0 20px;
     @media (max-width: 768px) {
       display: none;
     }
   `,
 };
 
-const WebAboutMeMemoji = styled(IconComponentPng)``;
-const MysqlIcon = styled(IconComponentPng)``;
-const NodeIcon = styled(IconComponentPng)``;
-const ReactIcon = styled(IconComponentPng)``;
+const WebAboutMeMemoji = styled(IconComponentPng)`
+  width: 100%;
+`;
+const MysqlIcon = styled(IconComponentPng)`
+  width: 80%;
+  z-index: -99999;
+`;
+const NodeIcon = styled(IconComponentPng)`
+  width: 80%;
+`;
+const ReactIcon = styled(IconComponentPng)`
+  width: 80%;
+`;
 
 ///////////아래부터 모바일///////////////
 
@@ -231,18 +226,6 @@ const M = {
     }
   `,
 };
-
-// const OrangeRightArrow = styled(IconComponentPng)`
-//   display: none;
-
-//   @media (max-width: 768px) {
-//     display: none;
-//   }
-
-//   @media (max-width: 768px) {
-//     display: flex;
-//   }
-// `;
 
 const M_AboutMeMemojiIcon = styled(IconComponentPng)`
   display: none;

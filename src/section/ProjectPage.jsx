@@ -23,13 +23,9 @@ const W = {
     font-weight: ${({ theme }) => theme.fontWeight.title};
     margin-bottom: 50px;
 
-    ${({ theme }) => theme.device.tablet} {
-      line-height: 45px;
-    }
-
     ${({ theme }) => theme.device.mobile} {
       font-size: calc(40px + 4.5vw);
-      line-height: calc(40px + 4.5vw);
+      line-height: calc(30px + 5vw);
       font-weight: 600;
     }
   `,

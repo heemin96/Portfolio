@@ -12,10 +12,7 @@ import IconComponentPng from "../utils/pngIcon.js";
 import IconComponent from "../utils/svgIcon.js";
 import { BsFillArrowLeftCircleFill } from "react-icons/bs";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
-import { MdAccessibilityNew } from "react-icons/md";
-
-import testImg from "../assets/icons/testImg.png";
-import { ReactComponent as Ecommerce2 } from "../assets/images/E_commerce.svg";
+import testImg from "../assets/images/testImg.png";
 
 const SlickSlider = (props) => {
   const settings = {
@@ -25,7 +22,7 @@ const SlickSlider = (props) => {
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: true,
+    // autoplay: true,
     speed: 700,
     autoplaySpeed: 1500,
     rows: 1,
@@ -67,36 +64,42 @@ const SlickSlider = (props) => {
 
   const slideList = [
     {
+      key: "1",
       name: "E-commerce",
       stack: ["react", "restApi"],
       backgroundColor: "blue",
       img: { testImg },
     },
     {
+      key: "2",
       name: "Youtube-clone",
-      stack: ["react", "restApi", "Redux"],
+      stack: ["react", "restApi", "redux"],
       backgroundColor: "red",
       img: { testImg },
     },
     {
+      key: "3",
       name: "Ourtube",
       stack: ["react", "restApi", "css"],
       backgroundColor: "green",
       img: { testImg },
     },
     {
+      key: "4",
       name: "E-commerce",
-      stack: ["react", "restApi"],
+      stack: ["react", "restApi", "html"],
       backgroundColor: "pink",
       img: { testImg },
     },
     {
+      key: "5",
       name: "E-commerce",
       stack: ["react", "restApi"],
       backgroundColor: "yellow",
       img: { testImg },
     },
     {
+      key: "6",
       name: "E-commerce",
       stack: ["react", "restApi", "html"],
       backgroundColor: "gray",
@@ -107,8 +110,8 @@ const SlickSlider = (props) => {
   return (
     <StyledSlider>
       <Slider {...settings}>
-        {slideList.map(({ name, stack, backgroundColor, img, index }) => (
-          <S.SliderContatiner>
+        {slideList.map(({ name, stack, backgroundColor, img, key }) => (
+          <S.SliderContatiner key={key}>
             <S.SliderLeadingTitle>{name}</S.SliderLeadingTitle>
             <S.SliderSkillStack>
               {stack.map((stack) => (
@@ -116,11 +119,9 @@ const SlickSlider = (props) => {
               ))}
             </S.SliderSkillStack>
             <S.SliderImage color={backgroundColor}>
-              {/* <MdAccessibilityNew className="icon" /> */}
-              {/* <Ecommerce name="ecommerce" /> */}
-              {/* <Ecommerce2 />  모듈 x 직접 임포트*/}
-
-              <img src={testImg} />
+              <S.ImageFlexContainer>
+                <img src={testImg} style={{ width: "80%" }} />
+              </S.ImageFlexContainer>
             </S.SliderImage>
             <HubContainer />
             <S.SliderBlock>-</S.SliderBlock>
@@ -193,19 +194,22 @@ const S = {
   `,
 
   SliderImage: styled.div`
-    max-width: 100%;
+    max-width: 400px;
+    height: 220px;
     border-radius: 18px;
-    margin-right: 10px;
     text-align: center;
     background-color: ${(props) => props.color};
+  `,
 
-    .icon {
-      font-size: 200px;
-    }
+  ImageFlexContainer: styled.div`
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
   `,
 
   SliderHub: styled.div`
-    margin-top: 10px;
+    margin-top: 20px;
     display: flex;
     flex-direction: row;
     gap: 5px;

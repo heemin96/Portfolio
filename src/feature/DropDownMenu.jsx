@@ -39,7 +39,7 @@ const DropDownMenu = () => {
           <MenuBar name="menubar" />
           <Menu isDropped={IsOpen}>
             <Ul>
-              {menuList.map(({ key, fontColor, name, index }) => (
+              {menuList.map(({ key, fontColor, name }) => (
                 <Link key={key} to={key} spy={true} smooth={true}>
                   <Li key={key} style={{ color: fontColor }}>
                     {name}

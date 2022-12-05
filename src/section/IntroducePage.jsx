@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import IconComponent from "../utils/svgIcon.js";
 import React, { Component } from "react";
-import RightVector from "../assets/icons/RightVector.png";
+import RightVector from "../assets/images/RightVector.png";
 
 function IntroducePage() {
   return (
@@ -45,36 +45,15 @@ const W = {
     font-size: calc(12px + 1.5vw);
     line-height: 60px;
     letter: -6%;
-    margin: 20px 0;
-
-    ${({ theme }) => theme.device.tablet} {
-      line-height: 40px;
-      letter: -6%;
-      font-weight: 600;
-    }
-
-    ${({ theme }) => theme.device.mobile} {
-      // line-height: 30px;
-      // letter: -6%;
-      // font-weight: 600;
-      margin: 0;
-    }
+    margin: calc(-10px + 1vw);
   `,
 
   IntroduceContent2: styled.div`
     font-family: Poppins;
     font-weight: 700;
     font-size: calc(16px + 2.5vw);
-    line-height: 80px;
+    line-height: calc(20px + 3.5vw);
     text-align: center;
-
-    ${({ theme }) => theme.device.tablet} {
-      line-height: 60px;
-    }
-
-    ${({ theme }) => theme.device.mobile} {
-      line-height: 50px;
-    }
   `,
 
   BlueText: styled.span`

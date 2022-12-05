@@ -1,13 +1,14 @@
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { theme } from "./styles/theme";
+import "./styles/global.css";
 
 //Page Import
-import Navbar from "./pages/Navbar";
-import IntroducePage from "./pages/IntroducePage";
-import ProjectPage from "./pages/ProjectPage";
-import AboutMePage from "./pages/AboutMePage";
-import IdeaPage from "./pages/IdeaPage";
+import Navbar from "./section/Navbar";
+import IntroducePage from "./section/IntroducePage";
+import ProjectPage from "./section/ProjectPage";
+import AboutMePage from "./section/AboutMePage";
+import IdeaPage from "./section/IdeaPage";
 
 function App() {
   return (

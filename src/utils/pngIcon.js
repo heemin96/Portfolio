@@ -1,17 +1,17 @@
 import React, { Component, useEffect } from "react";
-import Logo from "../assets/icons/Logo.png";
-import Menubar from "../assets/icons/Menubar.png";
-import M_Memoji from "../assets/icons/M_Memoji.png";
-import M_React from "../assets/icons/M_React_ic.png";
-import M_Node from "../assets/icons/M_Node_ic.png";
-import M_Mysql from "../assets/icons/M_Mysql_ic.png";
-import Global from "../assets/icons/Global_ic.png";
-import Github from "../assets/icons/Github_ic.png";
-import OrangeRightArrow from "../assets/icons/Github_ic.png";
-import AboutMe_Memoji from "../assets/icons/AboutMe_Memoji.png";
-import React_ic from "../assets/icons/React_ic.png";
-import Node_ic from "../assets/icons/Node_ic.png";
-import Mysql_ic from "../assets/icons/Mysql_ic.png";
+import Logo from "../assets/images/Logo.png";
+import Menubar from "../assets/images/Menubar.png";
+import M_Memoji from "../assets/images/M_Memoji.png";
+import M_React from "../assets/images/M_React_ic.png";
+import M_Node from "../assets/images/M_Node_ic.png";
+import M_Mysql from "../assets/images/M_Mysql_ic.png";
+import Global from "../assets/images/Global_ic.png";
+import Github from "../assets/images/Github_ic.png";
+import OrangeRightArrow from "../assets/images/Github_ic.png";
+import AboutMe_Memoji from "../assets/images/AboutMe_Memoji.png";
+import React_ic from "../assets/images/React_ic.png";
+import Node_ic from "../assets/images/Node_ic.png";
+import Mysql_ic from "../assets/images/Mysql_ic.png";
 
 const iconTypes = {
   logo: Logo,
@@ -34,7 +34,7 @@ const iconTypes = {
 const IconComponentPng = ({ name, ...props }) => {
   let Img = iconTypes[name];
 
-  return <img src={Img} />;
+  return <img src={Img} {...props} />;
 };
 
 export default IconComponentPng;

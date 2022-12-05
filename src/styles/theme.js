@@ -13,7 +13,7 @@ const fontWeight = {
 };
 
 const lineHeight = {
-  title: "82px",
+  title: "calc(12px + 3vw);",
 };
 
 const deviceSize = {
