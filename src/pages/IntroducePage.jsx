@@ -47,13 +47,13 @@ const W = {
     letter: -6%;
     margin: 20px 0;
 
-    // @media (max-width: 1024px) {
-    //   line-height: 30px;
-    //   letter: -6%;
-    //   font-weight: 600;
-    // }
+    ${({ theme }) => theme.device.tablet} {
+      line-height: 40px;
+      letter: -6%;
+      font-weight: 600;
+    }
 
-    @media (max-width: 768px) {
+    ${({ theme }) => theme.device.mobile} {
       // line-height: 30px;
       // letter: -6%;
       // font-weight: 600;
@@ -68,15 +68,11 @@ const W = {
     line-height: 80px;
     text-align: center;
 
-    @media (max-width: 1024px) {
-      // font-size: 40px;
-      // font-weight: 600;
+    ${({ theme }) => theme.device.tablet} {
       line-height: 60px;
     }
 
-    @media (max-width: 768px) {
-      // font-size: 30px;
-
+    ${({ theme }) => theme.device.mobile} {
       line-height: 50px;
     }
   `,

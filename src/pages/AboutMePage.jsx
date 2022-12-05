@@ -16,33 +16,37 @@ function AboutMePage() {
           About <br /> Me
         </W.AboutMeLeadingTitle>
         <W.AboutMeLeading>
-          <div style={{ display: "flex" }}>
+          <W.AboutMeLineFlexContainer>
             <W.AboutMeLine>
-              Tenho 20 anos, estou em transição de carreira,
+              I'm a 27 year old react developer in ourtube
               <br /> vindo da área administrativa onde desenvolvi
               <br /> experiência com gestão de <br />
               pessoas, gestão de empresas
               <br /> e negociação com cliente.
               <br /> Hoje construo aplicações fullstack!
             </W.AboutMeLine>
-          </div>
+          </W.AboutMeLineFlexContainer>
+          {/* 웹용 아이콘*/}
         </W.AboutMeLeading>
         <W.AboutMeMemoji>
           <WebAboutMeMemoji name="aboutMe_Memoji" />
         </W.AboutMeMemoji>
-
+        {/* 모바일용 아이콘 */}
         <M.AboutMeMemoji>
           <M_AboutMeMemojiIcon name="m_memoji"></M_AboutMeMemojiIcon>
         </M.AboutMeMemoji>
 
+        {/* Skil 섹션 */}
         <W.AboutMeSkills>
           <W.AboutMeSkillsLeadingTitle>Skills</W.AboutMeSkillsLeadingTitle>
+          {/* 웹용 아이콘 */}
           <W.AboutMeSkillsIconContainer>
             <ReactIcon name="react" />
             <NodeIcon name="node" />
             <MysqlIcon name="mysql" />
           </W.AboutMeSkillsIconContainer>
 
+          {/* 모바일용 아이콘 */}
           <M.AboutMeSkillsIconContainer>
             <M_ReactIcon name="m_react" />
             <M_NodeIcon name="m_node" />
@@ -73,7 +77,7 @@ const W = {
       "aboutMeLeading aboutMeMemoji"
       "skills aboutMeMemoji";
 
-    @media (max-width: 1024px) {
+    ${({ theme }) => theme.device.tablet} {
       gap: 0;
       grid-template-areas:
         "aboutMeLeadingTitle"
@@ -94,19 +98,19 @@ const W = {
 
   AboutMeLeadingTitle: styled.div`
     grid-area: aboutMeLeadingTitle;
-    font-size: calc(12px + 4.5vw);
-    line-height: 82px;
-    font-weight: 700;
-    font-family: Poppins;
+    font-family: ${({ theme }) => theme.fontFamily.title};
+    font-size: ${({ theme }) => theme.fontSize.title};
+    line-height: ${({ theme }) => theme.lineHeight.title};
+    font-weight: ${({ theme }) => theme.fontWeight.title};
     margin-bottom: 50px;
 
-    @media (max-width: 1024px) {
+    ${({ theme }) => theme.device.tablet} {
       line-height: 45px;
     }
 
-    @media (max-width: 768px) {
+    ${({ theme }) => theme.device.mobile} {
       font-size: calc(40px + 4.5vw);
-      line-height: 60px;
+      line-height: 50px;
       font-weight: 600;
     }
   `,
@@ -116,11 +120,11 @@ const W = {
     z-index: -1;
     margin-top: 100px;
 
-    @media (max-width: 1024px) {
+    ${({ theme }) => theme.device.tablet} {
       margin-top: 40px;
     }
 
-    @media (max-width: 768px) {
+    ${({ theme }) => theme.device.mobile} {
       margin-top: 70px;
     }
   `,
@@ -134,6 +138,10 @@ const W = {
     
   `,
 
+  AboutMeLineFlexContainer: styled.div`
+    display: flex;
+  `,
+
   AboutMeLine: styled.span`
     border-left: 4px solid black;
     padding-left: 5px;
@@ -144,7 +152,7 @@ const W = {
     grid-area: aboutMeMemoji;
     justify-self: end;
 
-    @media (max-width: 768px) {
+    ${({ theme }) => theme.device.mobile} {
       display: none;
     }
   `,
@@ -158,19 +166,21 @@ const W = {
   `,
 
   AboutMeSkillsLeadingTitle: styled.div`
-    font-size: calc(12px + 4.5vw);
-    line-height: 82px;
-    font-weight: 700;
-    font-family: Poppins;
+    font-family: ${({ theme }) => theme.fontFamily.title};
+    font-size: ${({ theme }) => theme.fontSize.title};
+    line-height: ${({ theme }) => theme.lineHeight.title};
+    font-weight: ${({ theme }) => theme.fontWeight.title};
     margin-bottom: 50px;
 
-    @media (max-width: 768px) {
-      font-size: calc(40px + 4.5vw);
-      line-height: 60px;
-      font-weight: 600;
+    ${({ theme }) => theme.device.tablet} {
+      line-height: 45px;
+      margin-top: 30px;
     }
-    @media (max-width: 1024px) {
-      margin-top: 50px;
+
+    ${({ theme }) => theme.device.mobile} {
+      font-size: calc(40px + 4.5vw);
+      line-height: 50px;
+      font-weight: 600;
     }
   `,
 

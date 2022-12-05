@@ -67,7 +67,7 @@ const W = {
     gap 64px;
     justify-content:space-between;
 
-    @media (max-width: 1024px){
+    ${({ theme }) => theme.device.tablet} {
       margin-bottom:10px;
       text-align-last: center;
         justify-content: center;
@@ -85,7 +85,7 @@ const W = {
     padding: 0px 0px 0px 4rem;
     margin-top: 2rem;
 
-    @media (max-width: 1024px) {
+    ${({ theme }) => theme.device.tablet} {
       padding: 0;
     }
   `,
@@ -97,7 +97,7 @@ const W = {
     font-family: Poppins;
     margin-bottom: 50px;
 
-    @media (max-width: 768px) {
+    ${({ theme }) => theme.device.mobile} {
       font-size: calc(40px + 4.5vw);
       line-height: 60px;
       font-weight: 600;
@@ -128,18 +128,18 @@ const W = {
     margin-top: 30px;
     gap: 15px;
 
-    @media (max-width: 1024px) {
+    ${({ theme }) => theme.device.tablet} {
       justify-content: center;
     }
   `,
 
   IdeaImage: styled.div`
     padding: 0 20px 0 0;
-    @media (max-width: 1024px) {
+    ${({ theme }) => theme.device.tablet} {
       display: none;
     }
 
-    @media (max-width: 768px) {
+    ${({ theme }) => theme.device.mobile} {
       display: none;
     }
   `,
@@ -156,14 +156,14 @@ const W = {
     padding-bottom: 0;
     margin-bottom: 0;
 
-    @media (max-width: 1024px) {
+    ${({ theme }) => theme.device.tablet} {
       display: none;
     }
   `,
 
   IdeaFooterMobile: styled.div`
     display: none;
-    @media (max-width: 1024px) {
+    ${({ theme }) => theme.device.tablet} {
       display: flex;
       font-family: Poppins;
       font-style: normal;
@@ -192,11 +192,11 @@ const W = {
     color: white;
     margin-bottom: 20px;
 
-    @media (max-width: 1024px) {
+    ${({ theme }) => theme.device.tablet} {
       font-size: 70px;
       margin-top: 50px;
     }
-    @media (max-width: 768px) {
+    ${({ theme }) => theme.device.mobile} {
       font-size: 50px;
     }
   `,
@@ -211,7 +211,8 @@ const RafoLogo = styled(IconComponent)`
 const M = {
   IdeaFooterMobile: styled.div`
     display: none;
-    @media (max-width: 1024px) {
+
+    ${({ theme }) => theme.device.tablet} {
       display: flex;
       font-family: Poppins;
       font-style: normal;

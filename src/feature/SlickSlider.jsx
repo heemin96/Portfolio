@@ -14,6 +14,9 @@ import { BsFillArrowLeftCircleFill } from "react-icons/bs";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import { MdAccessibilityNew } from "react-icons/md";
 
+import testImg from "../assets/icons/testImg.png";
+import { ReactComponent as Ecommerce2 } from "../assets/images/E_commerce.svg";
+
 const SlickSlider = (props) => {
   const settings = {
     arrows: true,
@@ -62,128 +65,66 @@ const SlickSlider = (props) => {
     ],
   };
 
+  const SlideList = [
+    {
+      name: "E-commerce",
+      stack: ["react", "restApi"],
+      backgroundColor: "blue",
+      img: { testImg },
+    },
+    {
+      name: "Youtube-clone",
+      stack: ["react", "restApi", "Redux"],
+      backgroundColor: "red",
+      img: { testImg },
+    },
+    {
+      name: "Ourtube",
+      stack: ["react", "restApi", "css"],
+      backgroundColor: "green",
+      img: { testImg },
+    },
+    {
+      name: "E-commerce",
+      stack: ["react", "restApi"],
+      backgroundColor: "pink",
+      img: { testImg },
+    },
+    {
+      name: "E-commerce",
+      stack: ["react", "restApi"],
+      backgroundColor: "yellow",
+      img: { testImg },
+    },
+    {
+      name: "E-commerce",
+      stack: ["react", "restApi", "html"],
+      backgroundColor: "gray",
+      img: { testImg },
+    },
+  ];
+
   return (
     <StyledSlider>
       <Slider {...settings}>
-        <S.SliderContatiner>
-          <S.SliderLeadingTitle>E-commerce</S.SliderLeadingTitle>
-          <S.SliderSkillStack>
-            <AppButton variant="react">React</AppButton>
-            <AppButton variant="restApi">RestApi</AppButton>
-          </S.SliderSkillStack>
-          <S.SliderImage style={{ backgroundColor: "blue" }}>
-            <MdAccessibilityNew style={{ fontSize: "200px" }} />
-            {/* <Ecommerce name="ecommerce" /> */}
-          </S.SliderImage>
-          <S.SliderHub>
-            <span>Github</span>
-            <Github name="github" />
-
-            <span>Global</span>
-            <Global name="global" />
-          </S.SliderHub>
-          <S.SliderBlock>-</S.SliderBlock>
-        </S.SliderContatiner>
-
-        <S.SliderContatiner>
-          <S.SliderLeadingTitle>Trybe Course</S.SliderLeadingTitle>
-          <S.SliderSkillStack>
-            <AppButton variant="react">React native</AppButton>
-            <AppButton variant="redux">Redux</AppButton>
-          </S.SliderSkillStack>
-          <S.SliderImage style={{ backgroundColor: "red" }}>
-            <MdAccessibilityNew style={{ fontSize: "200px" }} />
-            {/* <TrybeCourse name="trybecourse" /> */}
-          </S.SliderImage>
-          <S.SliderHub>
-            <span>Github</span>
-            <Github name="github" />
-
-            <span>Global</span>
-            <Global name="global" />
-          </S.SliderHub>
-          <S.SliderBlock>-</S.SliderBlock>
-        </S.SliderContatiner>
-
-        <S.SliderContatiner>
-          <S.SliderLeadingTitle>Trybetunes</S.SliderLeadingTitle>
-          <S.SliderSkillStack>
-            <AppButton variant="react">HTML</AppButton>
-            <AppButton variant="css">CSS</AppButton>
-            <AppButton variant="js">JS</AppButton>
-            <AppButton variant="redux">Redux</AppButton>
-          </S.SliderSkillStack>
-          <S.SliderImage style={{ backgroundColor: "yellow" }}>
-            <MdAccessibilityNew style={{ fontSize: "200px" }} />
-            {/* <TrybeTunes name="trybetunes" /> */}
-          </S.SliderImage>
-          <S.SliderHub>
-            <span>Github</span>
-            <Github name="github" />
-
-            <span>Global</span>
-            <Global name="global" />
-          </S.SliderHub>
-          <S.SliderBlock>-</S.SliderBlock>
-        </S.SliderContatiner>
-
-        <S.SliderContatiner>
-          <S.SliderLeadingTitle>Ourtube</S.SliderLeadingTitle>
-          <S.SliderSkillStack>
-            <AppButton variant="css">CSS</AppButton>
-            <AppButton variant="js">JS</AppButton>
-            <AppButton variant="redux">Redux</AppButton>
-          </S.SliderSkillStack>
-          <S.SliderImage style={{ backgroundColor: "gray" }}>
-            <MdAccessibilityNew style={{ fontSize: "200px" }} />
-          </S.SliderImage>
-          <S.SliderHub>
-            <span>Github</span>
-            <Github name="github" />
-            <span>Global</span>
-            <Global name="global" />
-          </S.SliderHub>
-          <S.SliderBlock>-</S.SliderBlock>
-        </S.SliderContatiner>
-        <S.SliderContatiner>
-          <S.SliderLeadingTitle>YoutubeClone</S.SliderLeadingTitle>
-          <S.SliderSkillStack>
-            <AppButton variant="react">React</AppButton>
-            <AppButton variant="restApi">RestApi</AppButton>
-          </S.SliderSkillStack>
-          <S.SliderImage style={{ backgroundColor: "yellow" }}>
-            <MdAccessibilityNew style={{ fontSize: "200px" }} />
-            {/* <TrybeTunes name="trybetunes" /> */}
-          </S.SliderImage>
-          <S.SliderHub>
-            <span>Github</span>
-            <Github name="github" />
-
-            <span>Global</span>
-            <Global name="global" />
-          </S.SliderHub>
-          <S.SliderBlock>-</S.SliderBlock>
-        </S.SliderContatiner>
-
-        <S.SliderContatiner>
-          <S.SliderLeadingTitle>TripUs</S.SliderLeadingTitle>
-          <S.SliderSkillStack>
-            <AppButton variant="react">React</AppButton>
-            <AppButton variant="redux">redux</AppButton>
-          </S.SliderSkillStack>
-          <S.SliderImage style={{ backgroundColor: "yellow" }}>
-            <MdAccessibilityNew style={{ fontSize: "200px" }} />
-            {/* <TrybeTunes name="trybetunes" /> */}
-          </S.SliderImage>
-          <S.SliderHub>
-            <span>Github</span>
-            <Github name="github" />
-
-            <span>Global</span>
-            <Global name="global" />
-          </S.SliderHub>
-          <S.SliderBlock>-</S.SliderBlock>
-        </S.SliderContatiner>
+        {SlideList.map(({ name, stack, backgroundColor, img, index }) => (
+          <S.SliderContatiner>
+            <S.SliderLeadingTitle>{name}</S.SliderLeadingTitle>
+            <S.SliderSkillStack>
+              {stack.map((stack) => (
+                <AppButton variant={stack}>{stack}</AppButton>
+              ))}
+            </S.SliderSkillStack>
+            <S.SliderImage color={backgroundColor}>
+              {/* <MdAccessibilityNew className="icon" /> */}
+              {/* <Ecommerce name="ecommerce" /> */}
+              {/* <Ecommerce2 />  모듈 x 직접 임포트*/}
+              <img src={testImg} />
+            </S.SliderImage>
+            <HubContainer />
+            <S.SliderBlock>-</S.SliderBlock>
+          </S.SliderContatiner>
+        ))}
       </Slider>
     </StyledSlider>
   );
@@ -204,11 +145,11 @@ const Pre = styled.div`
     color: gray;
   }
 
-  @media (max-width: 1024px) {
+  ${({ theme }) => theme.device.tablet} {
     left: 89%;
   }
 
-  @media (max-width: 768px) {
+  ${({ theme }) => theme.device.mobile} {
     left: 82%;
     margin-top: 22rem;
   }
@@ -224,7 +165,7 @@ const NextTo = styled.div`
     color: gray;
   }
 
-  @media (max-width: 768px) {
+  ${({ theme }) => theme.device.mobile} {
     margin-top: 22rem;
   }
 `;
@@ -255,6 +196,11 @@ const S = {
     border-radius: 18px;
     margin-right: 10px;
     text-align: center;
+    background-color: ${(props) => props.color};
+
+    .icon {
+      font-size: 200px;
+    }
   `,
 
   SliderHub: styled.div`
@@ -265,7 +211,7 @@ const S = {
   `,
 
   SliderBlock: styled.div`
-    margin: 40px 0;
+    margin: 10px 0;
     color: white;
   `,
 };
@@ -287,5 +233,19 @@ const TrybeTunes = styled(IconComponent)`
 `;
 const Github = styled(IconComponentPng)``;
 const Global = styled(IconComponentPng)``;
+
+const HubContainer = () => {
+  return (
+    <>
+      <S.SliderHub>
+        <span>Github</span>
+        <Github name="github" />
+
+        <span>Global</span>
+        <Global name="global" />
+      </S.SliderHub>
+    </>
+  );
+};
 
 export default SlickSlider;

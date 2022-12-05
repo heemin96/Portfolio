@@ -6,6 +6,29 @@ import styled, { css } from "styled-components";
 const DropDownMenu = () => {
   const [IsOpen, Ref, removeHandler] = useDetectClose(false);
 
+  const MenuList = [
+    {
+      link: "1",
+      fontColor: "black",
+      name: "Introduce",
+    },
+    {
+      link: "2",
+      fontColor: "blue",
+      name: "Project",
+    },
+    {
+      link: "3",
+      fontColor: "red",
+      name: "AboutMe",
+    },
+    {
+      link: "4",
+      fontColor: "green",
+      name: "Idea",
+    },
+  ];
+
   return (
     <Wrapper>
       <DropdownContainer>
@@ -13,21 +36,13 @@ const DropDownMenu = () => {
           <MenuBar name="menubar" />
           <Menu isDropped={IsOpen}>
             <Ul>
-              <Link to="1" spy={true} smooth={true}>
-                <Li style={{ color: "black" }}>Introdice</Li>
-              </Link>
-
-              <Link to="2" spy={true} smooth={true}>
-                <Li style={{ color: "blue" }}>Project</Li>
-              </Link>
-
-              <Link to="3" spy={true} smooth={true}>
-                <Li style={{ color: "red" }}>AboutMe</Li>
-              </Link>
-
-              <Link to="4" spy={true} smooth={true}>
-                <Li style={{ color: "green" }}>Idea</Li>
-              </Link>
+              {MenuList.map(({ link, fontColor, name, index }) => (
+                <Link key={link.id} to={link} spy={true} smooth={true}>
+                  <Li key={fontColor.id} style={{ color: fontColor }}>
+                    {name}
+                  </Li>
+                </Link>
+              ))}
             </Ul>
           </Menu>
         </DropdownButton>
@@ -62,7 +77,7 @@ const Menu = styled.div`
   padding: 10px;
   cursor: pointer;
 
-  @media (max-width: 1024px) {
+  ${({ theme }) => theme.device.tablet} {
     width: 130px;
   }
 

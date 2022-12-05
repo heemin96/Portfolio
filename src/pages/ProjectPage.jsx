@@ -5,9 +5,9 @@ import SlickSlider from "../feature/SlickSlider";
 function ProjectPage() {
   return (
     <W.ProjectGridContainer id="2">
-      <W.ProjectLeading>
+      <W.ProjectLeadingTitle>
         Recent <br /> Project
-      </W.ProjectLeading>
+      </W.ProjectLeadingTitle>
       <SlickSlider />
     </W.ProjectGridContainer>
   );
@@ -16,21 +16,20 @@ function ProjectPage() {
 const W = {
   ProjectGridContainer: styled.div``,
 
-  ProjectLeading: styled.div`
-    // font-size: 92px;
-    font-size: calc(12px + 4.5vw);
-    line-height: 82px;
-    font-weight: 700;
-    font-family: Poppins;
+  ProjectLeadingTitle: styled.div`
+    font-family: ${({ theme }) => theme.fontFamily.title};
+    font-size: ${({ theme }) => theme.fontSize.title};
+    line-height: ${({ theme }) => theme.lineHeight.title};
+    font-weight: ${({ theme }) => theme.fontWeight.title};
     margin-bottom: 50px;
 
-    @media (max-width: 1024px) {
+    ${({ theme }) => theme.device.tablet} {
       line-height: 45px;
     }
 
-    @media (max-width: 768px) {
+    ${({ theme }) => theme.device.mobile} {
       font-size: calc(40px + 4.5vw);
-      line-height: 50px;
+      line-height: calc(40px + 4.5vw);
       font-weight: 600;
     }
   `,

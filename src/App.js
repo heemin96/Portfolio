@@ -1,7 +1,6 @@
-// import logo from "./logo.svg";
-import styled from "styled-components";
 import React from "react";
-// import "./styles/global.css";
+import styled, { ThemeProvider } from "styled-components";
+import { theme } from "./styles/theme";
 
 //Page Import
 import Navbar from "./pages/Navbar";
@@ -9,11 +8,10 @@ import IntroducePage from "./pages/IntroducePage";
 import ProjectPage from "./pages/ProjectPage";
 import AboutMePage from "./pages/AboutMePage";
 import IdeaPage from "./pages/IdeaPage";
-import SlickSlider from "./feature/SlickSlider";
 
 function App() {
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <G.PageContainer>
         <G.GridContainer>
           <G.GridItemNav>
@@ -37,8 +35,7 @@ function App() {
           </G.GridItemIdea>
         </G.GridContainer>
       </G.PageContainer>
-      {/* <G.GoUpButton onClick={() => window.scrollTo(0, 0)}>TOP</G.GoUpButton> */}
-    </>
+    </ThemeProvider>
   );
 }
 
@@ -109,17 +106,6 @@ const G = {
         padding: 30px 0px 28px 0px;
     
   `,
-
-  // GoUpButton: styled.button`
-  //   position: fixed;
-  //   bottom: 400px;
-  //   left: 5px;
-  //   width: 70px;
-  //   height: 70px;
-  //   background: transparent;
-  //   cursor: pointer;
-  //   border-radius: 100%;
-  // `,
 };
 
 export default App;
