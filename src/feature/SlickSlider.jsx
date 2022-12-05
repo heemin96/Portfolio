@@ -65,7 +65,7 @@ const SlickSlider = (props) => {
     ],
   };
 
-  const SlideList = [
+  const slideList = [
     {
       name: "E-commerce",
       stack: ["react", "restApi"],
@@ -107,7 +107,7 @@ const SlickSlider = (props) => {
   return (
     <StyledSlider>
       <Slider {...settings}>
-        {SlideList.map(({ name, stack, backgroundColor, img, index }) => (
+        {slideList.map(({ name, stack, backgroundColor, img, index }) => (
           <S.SliderContatiner>
             <S.SliderLeadingTitle>{name}</S.SliderLeadingTitle>
             <S.SliderSkillStack>
@@ -119,6 +119,7 @@ const SlickSlider = (props) => {
               {/* <MdAccessibilityNew className="icon" /> */}
               {/* <Ecommerce name="ecommerce" /> */}
               {/* <Ecommerce2 />  모듈 x 직접 임포트*/}
+
               <img src={testImg} />
             </S.SliderImage>
             <HubContainer />

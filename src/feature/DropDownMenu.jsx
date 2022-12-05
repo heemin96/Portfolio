@@ -6,28 +6,31 @@ import styled, { css } from "styled-components";
 const DropDownMenu = () => {
   const [IsOpen, Ref, removeHandler] = useDetectClose(false);
 
-  const MenuList = [
+  const menuList = [
     {
-      link: "1",
+      key: "1",
       fontColor: "black",
       name: "Introduce",
     },
     {
-      link: "2",
+      key: "2",
       fontColor: "blue",
       name: "Project",
     },
     {
-      link: "3",
+      key: "3",
       fontColor: "red",
       name: "AboutMe",
     },
     {
-      link: "4",
+      key: "4",
       fontColor: "green",
       name: "Idea",
     },
   ];
+
+  //키값 안주면
+  //키값 생성기 + index 방법 있음
 
   return (
     <Wrapper>
@@ -36,9 +39,9 @@ const DropDownMenu = () => {
           <MenuBar name="menubar" />
           <Menu isDropped={IsOpen}>
             <Ul>
-              {MenuList.map(({ link, fontColor, name, index }) => (
-                <Link key={link.id} to={link} spy={true} smooth={true}>
-                  <Li key={fontColor.id} style={{ color: fontColor }}>
+              {menuList.map(({ key, fontColor, name, index }) => (
+                <Link key={key} to={key} spy={true} smooth={true}>
+                  <Li key={key} style={{ color: fontColor }}>
                     {name}
                   </Li>
                 </Link>
