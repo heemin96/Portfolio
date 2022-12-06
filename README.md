@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# PortFolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+<p align="center">
+  <br>
+  <img src="https://user-images.githubusercontent.com/101728625/205824607-9c99bf2b-f3ec-449d-8b56-5728dc107037.png"> 
+  <br>
+</p>
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 목차
+- [프로젝트 소개](#프로젝트-소개)
+- [기술스택](#기술-스택)
+- [구현기능](#구현-기능)
+- [느낀점](#느낀점)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## 프로젝트 소개
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<p align="justify">
+프로젝트 개요/동기
+</p>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<p align="center">
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+| Index | Detail                                                                                                                                                                                           |
+|-------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 구현 기간 | **2022.11.30 ~ 2022.12.06**                                                                                                                                                                                                                                                                                                                                           
+| 요약 |- clean code를 위한 개념 정리,확립하기 | 
+</p>
 
-### `npm run eject`
+<br>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 기술 스택
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+| JavaScript |  React   |  Node   |
+| :--------: | :------: | :-----: |
+|   <img src="https://user-images.githubusercontent.com/101728625/205824814-ff390f33-e823-42f6-850d-eb906733f377.png">   | <img src="https://user-images.githubusercontent.com/101728625/205825066-16686d43-2f6b-4e8c-bd23-60afe900cd87.png"> | <img src="https://user-images.githubusercontent.com/101728625/205825143-b99d9b06-7ad1-4c37-879e-f51e3d5317e4.png"> |
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<br>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 구현 기능
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+ 
+  
+### 기능 1
+- 코드 컨벤션
+<br/>
+  폴더구조
+  <br/>
+  
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+### 기능 2
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- 모듈화 
 
-### Analyzing the Bundle Size
+  styled-components ThemeProvider을 통한 전역 스타일링
+  
+   AppButton 모듈화
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+### 기능 3
+- DropDownMenu
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### 기능 4
 
-### Deployment
+- 반응형 Slick Slide
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 느낀점
+
+<p align="justify">
+// - Js: 기초 함수 공부 <br/> - React: 코드 컨벤션(네이밍, 폴더 구조, 코드 규칙 등) 정의, Rect Hook 개념 확립 <br/> - Css: Grid,Flex 등을 통한 반응형 개념 확립, calc를 통한 가변 폰트사이즈 만들기
+
+
+</p>
+
+
+
+
