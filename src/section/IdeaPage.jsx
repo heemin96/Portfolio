@@ -67,7 +67,7 @@ const W = {
     display: flex;
     flex-direction: row;
     color: #ffffff;
-    gap 64px;
+    gap 34px;
     justify-content:space-between;
 
     ${({ theme }) => theme.device.tablet} {
@@ -85,7 +85,7 @@ const W = {
   FlexColumnContainer: styled.div`
     display: flex;
     flex-direction: column;
-    padding: 0px 0px 0px 4rem;
+    padding: 0px 0px 0px 3rem;
     margin-top: 2rem;
 
     ${({ theme }) => theme.device.tablet} {
@@ -94,12 +94,11 @@ const W = {
   `,
 
   IdeaLeadingTitles: styled.div`
-    font-size: calc(10px + 4vw);
+    font-size: calc(15px + 3vw);
     line-height: 82px;
     font-weight: 700;
     font-family: Poppins;
     margin-bottom: 50px;
-
     ${({ theme }) => theme.device.mobile} {
       font-size: calc(40px + 4.5vw);
       line-height: 60px;

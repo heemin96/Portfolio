@@ -37,8 +37,8 @@ const VARIANTS = {
 
 const StyledButton = styled.button`
   ${(p) => p.variantStyle}
-  max-width:500px;
-  margin: 10px 10px 10px 0;
+  max-width:400px;
+  margin: 10px 5px 10px 0;
   padding: 0.5rem 1rem 0.5rem 1rem;
   border: none;
   font-family: Poppins;

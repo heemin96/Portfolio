@@ -9,7 +9,7 @@ function IntroducePage() {
       <W.IntroduceProfileImage id="1">
         <MemojiIcon name="memoji" />
       </W.IntroduceProfileImage>
-      <W.IntroduceContent1>Hi i'm Daniel 🤙</W.IntroduceContent1>
+      <W.IntroduceContent1>Hi i'm Heemin Kim 🤙</W.IntroduceContent1>
       <W.IntroduceContent2>
         I <span />
         <W.BlueText>develop</W.BlueText>

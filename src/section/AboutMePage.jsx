@@ -16,12 +16,12 @@ function AboutMePage() {
         <W.AboutMeLeading>
           <W.AboutMeLineFlexContainer>
             <W.AboutMeLine>
-              I'm a 27 year old react developer in ourtube
-              <br /> vindo da área administrativa onde desenvolvi
-              <br /> experiência com gestão de <br />
-              pessoas, gestão de empresas
-              <br /> e negociação com cliente.
-              <br /> Hoje construo aplicações fullstack!
+              I'm Heemin Kim, a React developer
+              <br /> I know how to handle react, js, css, html
+              <br /> Among them, I have developed a lot with react <br />
+              and I have also worked <br />
+              on a lot of responsive web work.
+              <br /> I think I'm a person who can help you
             </W.AboutMeLine>
           </W.AboutMeLineFlexContainer>
           {/* 웹용 아이콘*/}
@@ -91,6 +91,7 @@ const W = {
     font-size: ${({ theme }) => theme.fontSize.title};
     line-height: ${({ theme }) => theme.lineHeight.title};
     font-weight: ${({ theme }) => theme.fontWeight.title};
+    margin-bottom: 10px;
 
     ${({ theme }) => theme.device.tablet} {
       line-height: 45px;

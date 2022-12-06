@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import AppButton from "../components/AppButton.jsx";
+import slideList from "../utils/List/sliderList.js";
 
 //Slick
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "../styles/slickSlider.css";
 
 // 아이콘
 import IconComponentPng from "../utils/pngIcon.js";
@@ -14,7 +16,7 @@ import { BsFillArrowLeftCircleFill } from "react-icons/bs";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import testImg from "../assets/images/testImg.png";
 
-const SlickSlider = (props) => {
+const SlickSlider = () => {
   const settings = {
     arrows: true,
     vertical: false,
@@ -44,11 +46,11 @@ const SlickSlider = (props) => {
     responsive: [
       // 반응형 웹 구현 옵션
       {
-        breakpoint: 1024,
+        breakpoint: 1600,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           rows: 1,
-          slidesPerRow: 2,
+          slidesPerRow: 1,
         },
       },
       {
@@ -61,51 +63,6 @@ const SlickSlider = (props) => {
       },
     ],
   };
-
-  const slideList = [
-    {
-      key: "1",
-      name: "E-commerce",
-      stack: ["react", "restApi"],
-      backgroundColor: "blue",
-      img: { testImg },
-    },
-    {
-      key: "2",
-      name: "Youtube-clone",
-      stack: ["react", "restApi", "redux"],
-      backgroundColor: "red",
-      img: { testImg },
-    },
-    {
-      key: "3",
-      name: "Ourtube",
-      stack: ["react", "restApi", "css"],
-      backgroundColor: "green",
-      img: { testImg },
-    },
-    {
-      key: "4",
-      name: "E-commerce",
-      stack: ["react", "restApi", "html"],
-      backgroundColor: "pink",
-      img: { testImg },
-    },
-    {
-      key: "5",
-      name: "E-commerce",
-      stack: ["react", "restApi"],
-      backgroundColor: "yellow",
-      img: { testImg },
-    },
-    {
-      key: "6",
-      name: "E-commerce",
-      stack: ["react", "restApi", "html"],
-      backgroundColor: "gray",
-      img: { testImg },
-    },
-  ];
 
   return (
     <StyledSlider>
@@ -182,7 +139,7 @@ const S = {
   `,
 
   SliderLeadingTitle: styled.div`
-    font-size: 38px;
+    font-size: 32px;
     line-height: 57px;
     font-weight: 600;
     font-family: poppins;
@@ -191,10 +148,11 @@ const S = {
 
   SliderSkillStack: styled.div`
     text-align: start;
+    white-space: nowrap;
   `,
 
   SliderImage: styled.div`
-    max-width: 400px;
+    max-width: 320px;
     height: 220px;
     border-radius: 18px;
     text-align: center;

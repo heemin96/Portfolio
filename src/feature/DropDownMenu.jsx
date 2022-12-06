@@ -2,35 +2,10 @@ import useDetectClose from "../hooks/useDetectClose";
 import IconComponentPng from "../utils/pngIcon.js";
 import { Link } from "react-scroll";
 import styled, { css } from "styled-components";
+import menuList from "../utils/List/menuList";
 
 const DropDownMenu = () => {
   const [IsOpen, Ref, removeHandler] = useDetectClose(false);
-
-  const menuList = [
-    {
-      key: "1",
-      fontColor: "black",
-      name: "Introduce",
-    },
-    {
-      key: "2",
-      fontColor: "blue",
-      name: "Project",
-    },
-    {
-      key: "3",
-      fontColor: "red",
-      name: "AboutMe",
-    },
-    {
-      key: "4",
-      fontColor: "green",
-      name: "Idea",
-    },
-  ];
-
-  //키값 안주면
-  //키값 생성기 + index 방법 있음
 
   return (
     <Wrapper>

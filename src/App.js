@@ -13,7 +13,7 @@ import IdeaPage from "./section/IdeaPage";
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <G.PageContainer>
+      <PageContainer>
         <G.GridContainer>
           <G.GridItemNav>
             <Navbar />
@@ -35,21 +35,21 @@ function App() {
             <IdeaPage />
           </G.GridItemIdea>
         </G.GridContainer>
-      </G.PageContainer>
+      </PageContainer>
     </ThemeProvider>
   );
 }
 
+const PageContainer = styled.div``;
+
 //G는 Grid
 const G = {
-  PageContainer: styled.div`
-    margin: 0 10%;
-    justify-content: center;
-  `,
+  PageContainer: styled.div``,
 
   GridContainer: styled.div`
-    max-width: 100%;
     justify-content: center;
+    margin: 0 20%;
+    max-width: 100%;
     display: grid;
     grid-gap: 2.5em;
     grid-template-rows: auto;
@@ -61,6 +61,10 @@ const G = {
       "project"
       "aboutMe"
       "idea";
+
+    // ${({ theme }) => theme.device.tablet} {
+    //   margin: 0 15%;
+    // }
   `,
 
   GridItemNav: styled.div`
