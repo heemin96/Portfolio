@@ -49,8 +49,7 @@
   
 ### 기능 1
 - 코드 컨벤션
-<br/>
-  폴더구조
+- 폴더구조
   <br/>
   
 
@@ -59,9 +58,11 @@
 
 - 모듈화 
 
-  styled-components ThemeProvider을 통한 전역 스타일링
+   styled-components ThemeProvider을 통한 전역 스타일링(theme)
   
    AppButton 모듈화
+   
+   png,svg파일 모듈화
 
 
 ### 기능 3
@@ -78,8 +79,26 @@
 
 ## 느낀점
 
+- 좋았던 점
 <p align="justify">
-// - Js: 기초 함수 공부 <br/> - React: 코드 컨벤션(네이밍, 폴더 구조, 코드 규칙 등) 정의, Rect Hook 개념 확립 <br/> - Css: Grid,Flex 등을 통한 반응형 개념 확립, calc를 통한 가변 폰트사이즈 만들기
+1. React convention 규칙, 폴더 구조, 네이밍 정의 확립<br/><br/>
+2. react에서 img ,svg ,png 사용 방법 구체적 확립 <br/><br/>
+3. Grid를 통한 반응형 작업 개선, css 개념 개선<br/><br/>
+4. 모듈화를 통한 component 나누는 작업 개선 <br/><br/>
+
+- 개선하고 싶은 점
+1. 컴포넌트가 많아 질수록 반응형이 무너지는 경험 함 <br/>
+-> 좀 더 구체적인 css 정의  필요 할듯함
+
+2. cacl 함수 개념 정리 부족 
+-> 구체적인 계산법 정의 확립 부족
+
+3. slick slide 끊김 현상 <br/>
+-> 라이브러리 교체, or 슬라이더 직접 만들기 가 필요함
+
+4. 여전히 부족한 js 실력 <br/>
+-> 2중 map을 구현할 때 생각보다 많은 시간 소요됨 
+
 
 
 </p>
