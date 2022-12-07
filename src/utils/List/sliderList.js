@@ -1,45 +1,47 @@
+// import testImg from "./testImg.png";
+
 const slideList = [
   {
     key: "1",
     name: "E-commerce",
     stack: ["react", "restApi"],
     backgroundColor: "blue",
-    // img: { testImg },
+    img: "./slideImg/testImg.png",
   },
   {
     key: "2",
     name: "Youtube-clone",
     stack: ["react", "restApi", "redux"],
     backgroundColor: "red",
-    // img: { testImg },
+    img: "./slideImg/testImg.png",
   },
   {
     key: "3",
     name: "Ourtube",
     stack: ["react", "restApi", "css"],
     backgroundColor: "green",
-    // img: { testImg },
+    img: "./slideImg/testImg.png",
   },
   {
     key: "4",
     name: "E-commerce",
     stack: ["react", "restApi", "html"],
     backgroundColor: "pink",
-    // img: { testImg },
+    img: "./slideImg/testImg.png",
   },
   {
     key: "5",
     name: "E-commerce",
     stack: ["react", "restApi"],
     backgroundColor: "yellow",
-    // img: { testImg },
+    img: "./slideImg/testImg.png",
   },
   {
     key: "6",
     name: "E-commerce",
     stack: ["react", "restApi", "html"],
     backgroundColor: "gray",
-    // img: { testImg },
+    img: "./slideImg/testImg.png",
   },
 ];
 

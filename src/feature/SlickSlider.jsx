@@ -14,7 +14,7 @@ import IconComponentPng from "../utils/pngIcon.js";
 import IconComponent from "../utils/svgIcon.js";
 import { BsFillArrowLeftCircleFill } from "react-icons/bs";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
-import testImg from "../assets/images/testImg.png";
+// import testImg from "../assets/images/testImg.png";
 
 const SlickSlider = () => {
   const settings = {
@@ -24,7 +24,7 @@ const SlickSlider = () => {
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-    // autoplay: true,
+    autoplay: true,
     speed: 700,
     autoplaySpeed: 1500,
     rows: 1,
@@ -77,7 +77,7 @@ const SlickSlider = () => {
             </S.SliderSkillStack>
             <S.SliderImage color={backgroundColor}>
               <S.ImageFlexContainer>
-                <img src={testImg} style={{ width: "80%" }} />
+                <img src={img} style={{ width: "80%", height: "150px" }} />
               </S.ImageFlexContainer>
             </S.SliderImage>
             <HubContainer />
