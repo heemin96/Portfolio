@@ -12,6 +12,7 @@ import AboutMe_Memoji from "../assets/images/AboutMe_Memoji.png";
 import React_ic from "../assets/images/React_ic.png";
 import Node_ic from "../assets/images/Node_ic.png";
 import Mysql_ic from "../assets/images/Mysql_ic.png";
+
 import IdeaImage from "../assets/images/IdeaImage.png";
 import TwitterIcon from "../assets/images/Twitter_ic.png";
 import InIcon from "../assets/images/In_ic.png";
