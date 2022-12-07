@@ -1,11 +1,9 @@
-import styled from "styled-components";
 import React from "react";
-import IconComponent from "../utils/svgIcon";
+import styled from "styled-components";
 import { Link } from "react-scroll";
 
-import IdeaImage from "../assets/images/IdeaImage.png";
-import TwitterIcon from "../assets/images/Twitter_ic.png";
-import InIcon from "../assets/images/In_ic.png";
+import IconComponentPng from "../utils/pngIcon";
+import IconComponent from "../utils/svgIcon";
 import { BsFillArrowUpCircleFill } from "react-icons/bs";
 
 function IdeaPage() {
@@ -26,13 +24,13 @@ function IdeaPage() {
 
           <W.IdeaEmail>khk8300@naver.com</W.IdeaEmail>
           <W.IdeaIcon>
-            <img src={TwitterIcon} />
-            <img src={InIcon} />
+            <TwitterIcon name="twitterIcon" />
+            <InIcon name="inIcon" />
           </W.IdeaIcon>
         </W.FlexColumnContainer>
 
         <W.IdeaImage>
-          <img src={IdeaImage} style={{ borderRadius: "20px", width: "90%" }} />
+          <IdeaImage name="ideaImage" />
         </W.IdeaImage>
       </W.IdeaFlexContainer>
 
@@ -206,6 +204,13 @@ const W = {
 const RafoLogo = styled(IconComponent)`
   align-self: center;
 `;
+
+const IdeaImage = styled(IconComponentPng)`
+  border-radius: 20px;
+  width: 90%;
+`;
+const TwitterIcon = styled(IconComponentPng)``;
+const InIcon = styled(IconComponentPng)``;
 
 ///////////아래부터 모바일///////////////
 

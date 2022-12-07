@@ -86,16 +86,3 @@ const Li = styled.li`
 const MenuBar = styled(IconComponentPng)``;
 
 export default DropDownMenu;
-
-//   &:after {
-//     content: "";
-//     height: 0;
-//     width: 0;
-//     position: absolute;
-//     top: -5px;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-//     border: 12px solid transparent;
-//     border-top-width: 0;
-//     border-bottom-color: white;
-//   }

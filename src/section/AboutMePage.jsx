@@ -7,6 +7,19 @@ import IconComponentPng from "../utils/pngIcon.js";
 import OrangeRightArrow from "../assets/images/OrangeRightArrow.png";
 
 function AboutMePage() {
+  function AboutMeText() {
+    return (
+      <div>
+        I'm Heemin Kim, a React developer
+        <br /> I know how to handle react, js, css, html
+        <br /> Among them, I have developed a lot with react <br />
+        and I have also worked <br />
+        on a lot of responsive web work.
+        <br /> I think I'm a person who can help you
+      </div>
+    );
+  }
+
   return (
     <W.GridItemAboutMe id="3">
       <W.AboutMeGridContainer>
@@ -16,12 +29,7 @@ function AboutMePage() {
         <W.AboutMeLeading>
           <W.AboutMeLineFlexContainer>
             <W.AboutMeLine>
-              I'm Heemin Kim, a React developer
-              <br /> I know how to handle react, js, css, html
-              <br /> Among them, I have developed a lot with react <br />
-              and I have also worked <br />
-              on a lot of responsive web work.
-              <br /> I think I'm a person who can help you
+              <AboutMeText />
             </W.AboutMeLine>
           </W.AboutMeLineFlexContainer>
           {/* 웹용 아이콘*/}

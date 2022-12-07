@@ -16,6 +16,14 @@ const VARIANTS = {
     --button-color: #ffffff;
     --button-bg-color: #38bdf8;
   `,
+  reactNative: css`
+    --button-color: #ffffff;
+    --button-bg-color: #38bdf8;
+  `,
+  html: css`
+    --button-color: #ffffff;
+    --button-bg-color: #38bdf8;
+  `,
   restApi: css`
     --button-color: #ffffff;
     --button-bg-color: #f43f5e;

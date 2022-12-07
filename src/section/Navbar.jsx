@@ -7,14 +7,14 @@ function Navbar() {
   return (
     <W.FlexContainer id="5">
       <W.NavLeft>
-        <div style={{ marginLeft: "-25px" }}>
+        <W.LeftBox>
           <MainLogo name="logo" />
-        </div>
+        </W.LeftBox>
       </W.NavLeft>
       <W.NavRight>
-        <div style={{ marginTop: "15px", marginRight: "5px" }}>
+        <W.RightBox>
           <DropDownMenu />
-        </div>
+        </W.RightBox>
       </W.NavRight>
     </W.FlexContainer>
   );
@@ -29,9 +29,18 @@ const W = {
 
   NavLeft: styled.div``,
 
+  LeftBox: styled.div`
+    margin-left: -25px;
+  `,
+
   NavRight: styled.div`
     justify-self: end;
     cursor: pointer;
+  `,
+
+  RightBox: styled.div`
+    margin-top: 15px;
+    margin-right: 5px;
   `,
 };
 
