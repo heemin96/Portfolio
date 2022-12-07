@@ -67,7 +67,7 @@
 
 - 반응형 Slick Slide
 
-  React Slick 라이브러리를 통한 
+  React Slick 라이브러리를 통한 반응형 슬라이더 
 
 
 <br>
