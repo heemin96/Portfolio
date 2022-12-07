@@ -1,5 +1,3 @@
-// import testImg from "./testImg.png";
-
 const slideList = [
   {
     key: "1",
