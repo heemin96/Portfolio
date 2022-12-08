@@ -13,6 +13,7 @@ function AppButton({ children, variant, width }) {
   );
 }
 
+//왜 대문자?
 const VARIANTS = {
   react: css`
     --button-color: #ffffff;

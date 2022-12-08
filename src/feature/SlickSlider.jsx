@@ -9,12 +9,13 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../styles/slickSlider.css";
 
-// 아이콘
-import IconComponentPng from "../utils/pngIcon.js";
+// 아이콘 
 import IconComponent from "../utils/svgIcon.js";
 import { BsFillArrowLeftCircleFill } from "react-icons/bs";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
 // import testImg from "../assets/images/testImg.png";
+
+import IconComponentPng from "../utils/pngIcon.js";
 
 const SlickSlider = () => {
   const settings = {
@@ -86,7 +87,7 @@ const SlickSlider = () => {
             <S.SliderLeadingTitle>{name}</S.SliderLeadingTitle>
             <S.SliderSkillStack>
               {stack.map((stack) => (
-                <AppButton variant={stack}>{stack}</AppButton>
+                <AppButton width="400px" size='400' variant={stack}>{stack}</AppButton>
               ))}
             </S.SliderSkillStack>
             <S.SliderImage color={backgroundColor}>
@@ -118,6 +119,7 @@ const Pre = styled.div`
     color: gray;
   }
 
+  // 수정하기. 
   ${({ theme }) => theme.device.tablet} {
     left: 89%;
   }
