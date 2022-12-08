@@ -64,6 +64,20 @@ const SlickSlider = () => {
     ],
   };
 
+  const HubContainer = () => {
+    return (
+      <>
+        <S.SliderHub>
+          <span>Github</span>
+          <Github name="github" />
+
+          <span>Global</span>
+          <Global name="global" />
+        </S.SliderHub>
+      </>
+    );
+  };
+
   return (
     <StyledSlider>
       <Slider {...settings}>
@@ -110,7 +124,7 @@ const Pre = styled.div`
 
   ${({ theme }) => theme.device.mobile} {
     left: 82%;
-    margin-top: 22rem;
+    margin-top: 23.5rem;
   }
 `;
 
@@ -125,7 +139,7 @@ const NextTo = styled.div`
   }
 
   ${({ theme }) => theme.device.mobile} {
-    margin-top: 22rem;
+    margin-top: 23.5rem;
   }
 `;
 
@@ -157,6 +171,14 @@ const S = {
     border-radius: 18px;
     text-align: center;
     background-color: ${(props) => props.color};
+
+    ${({ theme }) => theme.device.tablet} {
+      max-width: 100%;
+    }
+
+    ${({ theme }) => theme.device.mobile} {
+      max-width: 100%;
+    }
   `,
 
   ImageFlexContainer: styled.div`
@@ -181,7 +203,7 @@ const S = {
 
 const Ecommerce = styled(IconComponent)`
   display: block;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
 `;
 const TrybeCourse = styled(IconComponent)`
@@ -196,19 +218,5 @@ const TrybeTunes = styled(IconComponent)`
 `;
 const Github = styled(IconComponentPng)``;
 const Global = styled(IconComponentPng)``;
-
-const HubContainer = () => {
-  return (
-    <>
-      <S.SliderHub>
-        <span>Github</span>
-        <Github name="github" />
-
-        <span>Global</span>
-        <Global name="global" />
-      </S.SliderHub>
-    </>
-  );
-};
 
 export default SlickSlider;

@@ -4,11 +4,15 @@ import IconComponentPng from "../utils/pngIcon.js";
 import DropDownMenu from "../feature/DropDownMenu.jsx";
 
 function Navbar() {
+  function reload() {
+    return window.location.reload();
+  }
+
   return (
     <W.FlexContainer id="5">
       <W.NavLeft>
         <W.LeftBox>
-          <MainLogo name="logo" />
+          <MainLogo name="logo" onClick={reload} />
         </W.LeftBox>
       </W.NavLeft>
       <W.NavRight>
@@ -44,6 +48,8 @@ const W = {
   `,
 };
 
-const MainLogo = styled(IconComponentPng)``;
+const MainLogo = styled(IconComponentPng)`
+  cursor: pointer;
+`;
 
 export default Navbar;

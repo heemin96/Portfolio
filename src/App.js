@@ -61,10 +61,6 @@ const G = {
       "project"
       "aboutMe"
       "idea";
-
-    // ${({ theme }) => theme.device.tablet} {
-    //   margin: 0 15%;
-    // }
   `,
 
   GridItemNav: styled.div`
