@@ -1,12 +1,14 @@
 import styled, { css } from "styled-components";
 import { useRef } from "react";
 
-function AppButton({ children, variant }) {
+function AppButton({ children, variant, width }) {
   const variantStyle = VARIANTS[variant];
 
   return (
     <>
-      <StyledButton variantStyle={variantStyle}>{children}</StyledButton>
+      <StyledButton width={width} variantStyle={variantStyle}>
+        {children}
+      </StyledButton>
     </>
   );
 }
@@ -45,7 +47,10 @@ const VARIANTS = {
 
 const StyledButton = styled.button`
   ${(p) => p.variantStyle}
-  max-width:400px;
+  max-width: ${(props) =>
+    (props.width = !undefined
+      ? props.width
+      : "400px")}; //할당이 안되면 undefined , null 은
   margin: 10px 5px 10px 0;
   padding: 0.5rem 1rem 0.5rem 1rem;
   border: none;
